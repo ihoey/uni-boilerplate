@@ -15,6 +15,8 @@
             class="image_3"
             referrerpolicy="no-referrer"
             src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
+          <uni-file-picker limit="9" title="最多选择9张图片"></uni-file-picker>
+
           <span class="text-group_1">上传人像面</span>
         </div>
       </div>
