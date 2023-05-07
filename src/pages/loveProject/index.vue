@@ -9,7 +9,7 @@
       <div class="project-list-title">全部项目</div>
       <div class="btn-gather">
         <div class="btn" :class="{ 'active': item.id == btnActive }" v-for="(item, index) in btnList" :key="index"
-             @click="handleProjectListBtn(item.id)">
+          @click="handleProjectListBtn(item.id)">
           {{ item.title }}
         </div>
       </div>
@@ -39,44 +39,44 @@
 
 <script>
 // Use Vuex
-import tabBar from '@/components/custom-tab-bar'
-import store from '@/store'
+import tabBar from "@/components/custom-tab-bar";
+import store from "@/store/index";
 
 export default {
-  data () {
+  data() {
     return {
-      btnActive: '1',
+      btnActive: "1",
       btnList: [
-        {id: '1', title: '全部'},
-        {id: '2', title: '孤寡老人'},
-        {id: '3', title: '贫困地区'},
-        {id: '4', title: '失能失智'},
+        { id: "1", title: "全部" },
+        { id: "2", title: "孤寡老人" },
+        { id: "3", title: "贫困地区" },
+        { id: "4", title: "失能失智" },
       ],
-      value: '',
-    }
+      value: "",
+    };
   },
 
   components: {
     tabBar,
   },
   computed: {
-    count () {
-      return store.state.count
-    }
+    count() {
+      return store.state.count;
+    },
   },
   methods: {
-    handleProjectListBtn (id) {
-      console.log('id :>> ', this.value)
-      this.btnActive = id
+    handleProjectListBtn(id) {
+      console.log("id :>> ", this.value);
+      this.btnActive = id;
     },
-    increment () {
-      store.commit('increment')
+    increment() {
+      store.commit("increment");
     },
-    decrement () {
-      store.commit('decrement')
-    }
-  }
-}
+    decrement() {
+      store.commit("decrement");
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -92,7 +92,7 @@ export default {
 
     .project-title {
       font-weight: 400;
-      color: #FFFFFF;
+      color: #ffffff;
       font-size: 36px;
       width: 100%;
       text-align: center;
@@ -103,12 +103,12 @@ export default {
   ::v-deep .van-search {
     margin: 28px 16px 52px 21px;
     height: 70px;
-    background: #F9F9F9;
+    background: #f9f9f9;
     border-radius: 12px;
   }
 
   .project-list-content {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 30px 30px 0px 0px;
     padding-bottom: 180px;
 
@@ -132,17 +132,17 @@ export default {
         width: 161px;
         height: 58px;
         line-height: 60px;
-        background: #EFEFEF;
+        background: #efefef;
         border-radius: 6px;
         font-size: 30px;
         font-weight: 400;
         color: #999999;
-        border: 1px solid #EFEFEF;
+        border: 1px solid #efefef;
 
         &.active {
-          background: #FDEFE8;
-          border: 1px solid #F9651E;
-          color: #F9651E;
+          background: #fdefe8;
+          border: 1px solid #f9651e;
+          color: #f9651e;
           position: relative;
 
           &:after {
@@ -162,7 +162,7 @@ export default {
 
     .project-list-item {
       width: calc(100% - 40px);
-      background: #FFFFFF;
+      background: #ffffff;
       border-radius: 12px;
       padding: 20px;
       text-align: left;
@@ -175,7 +175,7 @@ export default {
         content: "";
         width: calc(100% - 40px);
         height: 1px;
-        background: #E8E8E8;
+        background: #e8e8e8;
         bottom: 21px;
       }
 
@@ -218,21 +218,20 @@ export default {
             border-radius: 21px;
 
             &.danger {
-              color: #F2A796;
-              background: #FEF1EF;
+              color: #f2a796;
+              background: #fef1ef;
             }
 
             &.warning {
-              color: #F1B05F;
-              background: #FDF6EE;
+              color: #f1b05f;
+              background: #fdf6ee;
             }
 
             &.primary {
-              color: #97DADF;
-              background: #EEFAFC;
+              color: #97dadf;
+              background: #eefafc;
             }
           }
-
         }
       }
 

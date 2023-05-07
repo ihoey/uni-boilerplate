@@ -83,15 +83,15 @@ export default {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 148px;
+  height: 148rpx;
   width: 100%;
-  padding-top: 12px;
+  padding-top: 12rpx;
   // box-shadow: 0 0 2px #C4C4C4;
   z-index: 1000;
   background: #fff;
 
   &.isIphoneX {
-    padding-bottom: 66rpx;
+    padding-bottom: 66rrpx;
   }
 
   .tabbar {
@@ -105,21 +105,21 @@ export default {
         position: relative;
 
         img {
-          width: 40px;
-          height: 40px;
+          width: 40rpx;
+          height: 40rpx;
 
           &.imgSpecial {
-            width: w = 80px;
-            height: h = 80px;
+            width: w = 80rpx;
+            height: h = 80rpx;
           }
         }
       }
 
       .tabbar-text {
         text-align: center;
-        line-height: 36px;
+        line-height: 36rpx;
         color: #333333;
-        font-size: 22px;
+        font-size: 22rpx;
 
         &.active {
           color: #F36728;
@@ -129,11 +129,11 @@ export default {
       &.wrapSpecial {
         .tabbar-icon {
           position: absolute;
-          top: 9px;
-          width: 80px;
-          height: 80px;
+          top: 9rpx;
+          width: 80rpx;
+          height: 80rpx;
           padding: 0;
-          top: 9px;
+          top: 9rpx;
           left: 50%;
           margin-left: -((@width + @padding * 2) / 2);
           border: none;
@@ -143,7 +143,7 @@ export default {
 
         .tabbar-text {
           position: relative;
-          bottom: -56px;
+          bottom: -56rpx;
         }
       }
     }
