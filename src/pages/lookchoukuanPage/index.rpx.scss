@@ -12,6 +12,23 @@
     width: 690rpx;
     margin: 0 auto 20rpx;
     padding: 34rpx 20rpx 34rpx 19rpx;
+    .text_4 {
+      overflow-wrap: break-word;
+      color: rgba(51, 51, 51, 1);
+      font-size: 28rpx;
+      font-weight: NaN;
+      text-align: justify;
+      white-space: nowrap;
+      line-height: 40rpx;
+      margin: 38rpx 595rpx 0 0;
+    }
+    .box_2 {
+      background-color: rgba(233, 233, 233, 1);
+      width: 649rpx;
+      height: 1rpx;
+      align-self: center;
+      margin-top: 22rpx;
+    }
     .box_7 {
       width: 651rpx;
       .text_3 {

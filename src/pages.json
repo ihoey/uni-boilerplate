@@ -7,7 +7,14 @@
     }
   },
   "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/lookchoukuanPage/index",
+      "style": {
+        "navigationBarTitleText": "查看志愿者筹款详情",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
     {
       "path": "pages/lookxiangqingpage/index",
       "style": {
