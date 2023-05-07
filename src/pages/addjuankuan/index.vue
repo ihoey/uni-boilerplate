@@ -66,6 +66,11 @@ export default {
 
 <style lang='scss'>
 @import "./index.rpx.scss";
+::v-deep .uni-date-x {
+  background: #f9f9f9 !important;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
 </style>
 
 
