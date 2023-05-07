@@ -37,31 +37,28 @@ export default {
     return {
       loopData0: [
         {
-          lanhutext0: '孤寡老人的午餐计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供免费午餐行动',
-          lanhuimage0:
-            '/static/images/more.png',
+          lanhutext0: "孤寡老人的午餐计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供免费午餐行动",
+          lanhuimage0: "/static/images/more.png",
           lanhuimage1:
-            'https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/c64a076554cc41c4ba180e8b110a10ab_mergeImage.png',
-          lanhutext2: '保存下载',
+            "https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/c64a076554cc41c4ba180e8b110a10ab_mergeImage.png",
+          lanhutext2: "保存下载",
         },
         {
-          lanhutext0: '孤寡老人的午餐计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供免费午餐行动',
-          lanhuimage0:
-            '/static/images/more.png',
+          lanhutext0: "孤寡老人的午餐计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供免费午餐行动",
+          lanhuimage0: "/static/images/more.png",
           lanhuimage1:
-            'https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/c64a076554cc41c4ba180e8b110a10ab_mergeImage.png',
-          lanhutext2: '保存下载',
+            "https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/c64a076554cc41c4ba180e8b110a10ab_mergeImage.png",
+          lanhutext2: "保存下载",
         },
         {
-          lanhutext0: '孤寡老人的午餐计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供免费午餐行动',
-          lanhuimage0:
-            '/static/images/more.png',
+          lanhutext0: "孤寡老人的午餐计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供免费午餐行动",
+          lanhuimage0: "/static/images/more.png",
           lanhuimage1:
-            'https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/c64a076554cc41c4ba180e8b110a10ab_mergeImage.png',
-          lanhutext2: '保存下载',
+            "https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/c64a076554cc41c4ba180e8b110a10ab_mergeImage.png",
+          lanhutext2: "保存下载",
         },
       ],
       constants: {},
@@ -71,7 +68,7 @@ export default {
     onClick_1() {
       alert(1);
     },
-        toPath(url) {
+    toPath(url) {
       wx.navigateTo({
         url,
       });
@@ -89,7 +86,6 @@ export default {
 
 
 <style lang='scss'>
-@import "../common/common.scss";
 @import "./index.rpx.scss";
 </style>
 

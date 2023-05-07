@@ -77,8 +77,8 @@
         <view @click="() => changeMore(0)" class="image-text_17 flex-row justify-between">
           <text class="text-group_4">查看全部</text>
           <image :class="{ more: more[0] }" class="icon_4" style="transition: all 0.3s ease-in-out;"
-                 referrerpolicy="no-referrer"
-                 src="/static/images/details_tab/SketchPngefd2add4b90542ef72ffcb54c45d35520e6b46a3cc914addbac47f68bb7a4b1a.png" />
+            referrerpolicy="no-referrer"
+            src="/static/images/details_tab/SketchPngefd2add4b90542ef72ffcb54c45d35520e6b46a3cc914addbac47f68bb7a4b1a.png" />
         </view>
         <view class="image_4" />
 
@@ -139,8 +139,8 @@
         <view @click="() => changeMore(1)" class="image-text_19 flex-row justify-between">
           <text class="text-group_8">查看全部</text>
           <image class="icon_6" :class="{ more: more[1] }" referrerpolicy="no-referrer"
-                 style="transition: all 0.3s ease-in-out;"
-                 src="/static/images/details_tab/SketchPngefd2add4b90542ef72ffcb54c45d35520e6b46a3cc914addbac47f68bb7a4b1a.png" />
+            style="transition: all 0.3s ease-in-out;"
+            src="/static/images/details_tab/SketchPngefd2add4b90542ef72ffcb54c45d35520e6b46a3cc914addbac47f68bb7a4b1a.png" />
         </view>
 
         <view class="image_4" />
@@ -157,8 +157,8 @@
         <view @click="() => changeMore(2)" class="image-text_21 flex-row justify-between">
           <text class="text-group_10">查看全部</text>
           <image class="icon_8" :class="{ more: more[2] }" referrerpolicy="no-referrer"
-                 style="transition: all 0.3s ease-in-out;"
-                 src="/static/images/details_tab/SketchPngefd2add4b90542ef72ffcb54c45d35520e6b46a3cc914addbac47f68bb7a4b1a.png" />
+            style="transition: all 0.3s ease-in-out;"
+            src="/static/images/details_tab/SketchPngefd2add4b90542ef72ffcb54c45d35520e6b46a3cc914addbac47f68bb7a4b1a.png" />
         </view>
 
         <view class="image_4" />
@@ -183,7 +183,7 @@
             </view>
 
             <image class="section_1 flex-col"
-                   src="/static/images/details_tab/SketchPng90ce35b3cde27f93b14f2e70b035a73ddc99cdf472b6d45cef9ab855af51f3d6.png" />
+              src="/static/images/details_tab/SketchPng90ce35b3cde27f93b14f2e70b035a73ddc99cdf472b6d45cef9ab855af51f3d6.png" />
 
             <view class="text-group_16 flex-col">
               <text class="text_11">2023年3月1日由公益机构发布</text>
@@ -214,7 +214,7 @@
           <view class="section_2 flex-row justify-between">
             <view class="image-text_1 flex-row justify-between">
               <image class="single-avatar_1" referrerpolicy="no-referrer"
-                     src="http://localhost:3000/images/details/SketchPng90ce35b3cde27f93b14f2e70b035a73ddc99cdf472b6d45cef9ab855af51f3d6.png" />
+                src="http://localhost:3000/images/details/SketchPng90ce35b3cde27f93b14f2e70b035a73ddc99cdf472b6d45cef9ab855af51f3d6.png" />
               <view class="text-group_1 flex-col">
                 <text class="text_4">爱心人士</text>
                 <text class="text_5">2023.10.10</text>
@@ -225,7 +225,7 @@
           <view class="section_2 flex-row justify-between last">
             <view class="image-text_1 flex-row justify-between">
               <image class="single-avatar_1" referrerpolicy="no-referrer"
-                     src="http://localhost:3000/images/details/SketchPng90ce35b3cde27f93b14f2e70b035a73ddc99cdf472b6d45cef9ab855af51f3d6.png" />
+                src="http://localhost:3000/images/details/SketchPng90ce35b3cde27f93b14f2e70b035a73ddc99cdf472b6d45cef9ab855af51f3d6.png" />
               <view class="text-group_1 flex-col">
                 <text class="text_4">爱心人士</text>
                 <text class="text_5">2023.10.10</text>
@@ -241,12 +241,12 @@
     <view class="box_4 flex-row">
       <view class="image-text_15 flex-col" @click="toPath('/pages/index/index')">
         <image class="icon_2" referrerpolicy="no-referrer"
-               src="/static/images/details_tab/SketchPng60684e3b3edebcc91af51c04387d7c289ad4fbce5ff0b64b82a744a5b83661b8.png" />
+          src="/static/images/details_tab/SketchPng60684e3b3edebcc91af51c04387d7c289ad4fbce5ff0b64b82a744a5b83661b8.png" />
         <text class="text-group_1">首页</text>
       </view>
       <view class="image-text_16 flex-col">
         <image class="icon_3" referrerpolicy="no-referrer"
-               src="/static/images/details_tab/SketchPnga8f90a1c9592c21cefdd58146710ec1de0ed4475ee2beb8ac1935a7fa31d8f8d.png" />
+          src="/static/images/details_tab/SketchPnga8f90a1c9592c21cefdd58146710ec1de0ed4475ee2beb8ac1935a7fa31d8f8d.png" />
         <text class="text-group_2">{{ mainItemInfo.forwardNum }}次</text>
       </view>
       <button class="button_1 flex-col" @click="onClick_1">
@@ -553,7 +553,6 @@ export default {
 };
 </script>
 <style lang='scss'>
-@import "../common/common.scss";
 @import "./index.rpx.scss";
 </style>
 
