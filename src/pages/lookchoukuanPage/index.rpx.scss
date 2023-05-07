@@ -219,4 +219,11 @@
       transform: rotate(-180deg);
     }
   }
+  ::v-deep .arrorR {
+    height: 27rpx !important;
+    margin-top: 4rpx;
+    .uni-icons {
+      display: block;
+    }
+  }
 }

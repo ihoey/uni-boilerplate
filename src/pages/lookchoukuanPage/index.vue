@@ -28,8 +28,8 @@
 
       </view>
     </view>
-    <view class="group_3 flex-col" :class="{close:!visible1}">
-      <view class="box_7 flex-row justify-between" @click="changeVisible('visible1')">
+    <view class="group_3 flex-col" :class="{close:!visible2}">
+      <view class="box_7 flex-row justify-between" @click="changeVisible('visible2')">
         <text class="text_3">老人基础信息</text>
         <uni-icons class="arrorR" type="top" color="#999" size="15"></uni-icons>
       </view>
@@ -53,8 +53,8 @@
       </view>
 
     </view>
-    <view class="group_3 flex-col" :class="{close:!visible1}">
-      <view class="box_7 flex-row justify-between" @click="changeVisible('visible1')">
+    <view class="group_3 flex-col" :class="{close:!visible3}">
+      <view class="box_7 flex-row justify-between" @click="changeVisible('visible3')">
         <text class="text_3">辅助证明</text>
         <uni-icons class="arrorR" type="top" color="#999" size="15"></uni-icons>
       </view>
@@ -78,8 +78,8 @@
       </view>
 
     </view>
-    <view class="group_3 flex-col" :class="{close:!visible2}">
-      <view class="box_7 flex-row justify-between" @click="changeVisible('visible2')">
+    <view class="group_3 flex-col" :class="{close:!visible4}">
+      <view class="box_7 flex-row justify-between" @click="changeVisible('visible4')">
         <text class="text_3">筹款标题</text>
         <uni-icons class="arrorR" type="top" color="#999" size="15"></uni-icons>
       </view>
@@ -106,8 +106,8 @@
 
       </view>
     </view>
-    <view class="group_3 flex-col" :class="{close:!visible3}">
-      <view class="box_7 flex-row justify-between" @click="changeVisible('visible3')">
+    <view class="group_3 flex-col" :class="{close:!visible5}">
+      <view class="box_7 flex-row justify-between" @click="changeVisible('visible5')">
         <text class="text_3">筹款金额</text>
         <uni-icons class="arrorR" type="top" color="#999" size="15"></uni-icons>
       </view>
@@ -120,8 +120,8 @@
         <text class="text_18">2023年6月10日</text>
       </view>
     </view>
-    <view class="group_3 flex-col" :class="{close:!visible4}">
-      <view class="box_7 flex-row justify-between" @click="changeVisible('visible4')">
+    <view class="group_3 flex-col" :class="{close:!visible6}">
+      <view class="box_7 flex-row justify-between" @click="changeVisible('visible6')">
         <text class="text_3">筹款人宣传语</text>
         <uni-icons class="arrorR" type="top" color="#999" size="15"></uni-icons>
       </view>
@@ -145,6 +145,8 @@ export default {
       visible2: true,
       visible3: true,
       visible4: true,
+      visible5: true,
+      visible6: true,
       arrImg: [
         "https://img1.baidu.com/it/u=1357002844,4027162325&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=465",
         "https://picnew9.photophoto.cn/20150510/xuankufeixiangdeyingwutupian-09960611_1.jpg",
