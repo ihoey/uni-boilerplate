@@ -52,7 +52,7 @@
     <!-- <van-dialog id="van-dialog" /> -->
     <!-- <uni-popup ref="popup" type="bottom">底部弹出 Popup</uni-popup> -->
     <uni-popup ref="inputDialog" type="dialog">
-      <uni-popup-dialog ref="inputClose" mode="input" title="输入内容" value="对话框预置提示内容!"
+      <uni-popup-dialog mode="input" title="输入内容" value="对话框预置提示内容!"
         placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
     </uni-popup>
   </view>
@@ -120,7 +120,7 @@ export default {
     },
     logout() {
       this.$nextTick(() => {
-        console.log(" this.$refs.inputDialog :>> ", this.$refs.inputDialog);
+        console.log(" this.$refs.inputDialog :>> ", this.$refs);
         this.$refs.inputDialog.open();
       });
     },
