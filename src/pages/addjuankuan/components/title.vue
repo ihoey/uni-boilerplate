@@ -7,31 +7,49 @@
         referrerpolicy="no-referrer"
         src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng44ac6d6e6afa18c6c29fb960ce8f8601230573a70bfa84dbc9617d7125de3ea3" />
     </div>
-    <span class="text_4">剪简短描述您的情况或需要什么帮助</span>
+    <rs-input class="text_4" placeholder="剪简短描述您的情况或需要什么帮助"></rs-input>
     <div class="group_3 flex-col"></div>
     <span class="text_5">筹款人故事</span>
     <div class="text-wrapper_1 flex-col">
-      <span class="text_6">筹款人的生活详情及需救助内容</span>
+      <!-- <span class="text_6">筹款人的生活详情及需救助内容</span> -->
+      <textarea class="text_6" name="" id="" cols="30" rows="5" placeholder="筹款人的生活详情及需救助内容"></textarea>
     </div>
     <div class="text-group_7 flex-col">
       <span class="text_7">老人生活图片</span>
       <span class="text_23">可上传多张</span>
     </div>
-    <div class="group_4 flex-col">
-      <img
-        class="image_2"
-        referrerpolicy="no-referrer"
-        src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
-      <span class="text_8">请上传老人生活图片</span>
-    </div>
+
+    <uni-section class="text_8">
+      <view class="example-body">
+        <uni-file-picker limit="9" :imageStyles="imageStyles">
+          <div class="group_4 flex-col align-center justify-center">
+            <img
+              class="image_2"
+              referrerpolicy="no-referrer"
+              src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
+            <span class="text_8">请上传老人生活图片</span>
+          </div>
+        </uni-file-picker>
+      </view>
+    </uni-section>
+
   </div>
 </template>
 <script>
+import rsInput from "@/components/rs-input/rs-input";
+
 export default {
+  components: {
+    rsInput,
+  },
   name: "f-title",
   data() {
     return {
       visible: true,
+      imageStyles: {
+        width: 160,
+        height: 102,
+      },
     };
   },
   methods: {
@@ -42,6 +60,15 @@ export default {
 };
 </script>
 <style lang="scss">
+::v-deep .rs-input {
+  padding: 0 0;
+  .rs-input--input {
+    padding: 0 26rpx;
+    // background-color: rgb(249, 249, 249);
+    border-radius: 10rpx;
+  }
+}
+
 .section_3 {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 12px;
@@ -87,7 +114,7 @@ export default {
     text-align: justify;
     white-space: nowrap;
     line-height: 40rpx;
-    margin: 38rpx 202rpx 0 0;
+    margin-top: 38rpx;
   }
 
   .group_3 {
@@ -113,7 +140,7 @@ export default {
     background-color: rgba(249, 249, 249, 1);
     border-radius: 12px;
     margin-top: 20rpx;
-    padding: 25rpx 230rpx 136rpx 28rpx;
+    padding: 25rpx 0 10rpx 28rpx;
 
     .text_6 {
       overflow-wrap: break-word;
@@ -156,8 +183,8 @@ export default {
     background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5ed2b867a8dbb7e662eceed8c94123d603f57fa0de95401843414c3003f7f6e4)
       100% no-repeat;
     background-size: 100% 100%;
-    margin: 20rpx 338rpx 0 0;
-    padding: 35rpx 48rpx 43rpx 48rpx;
+    width: 100%;
+    height: 100%;
 
     .image_2 {
       width: 66rpx;

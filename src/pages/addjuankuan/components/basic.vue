@@ -9,43 +9,50 @@
     </div>
     <span v-show="visible" class="text_21">上传证件进行身份识别，请保证照片完整、清晰、无反光；我们将依法保障您的信息安全。</span>
     <div class="group_13 flex-row justify-between">
-      <div class="section_8 flex-row">
+      <div class="align-center flex-row justify-center section_8">
         <div class="image-text_17 flex-col">
           <img
             class="image_3"
             referrerpolicy="no-referrer"
             src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
-          <uni-file-picker limit="9" title="最多选择9张图片"></uni-file-picker>
-
           <span class="text-group_1">上传人像面</span>
         </div>
+        <uni-file-picker class="picker" limit="1" :auto-upload="false"></uni-file-picker>
       </div>
-      <div class="section_9 flex-row">
-        <div class="image-text_18 flex-col">
+      <div class="align-center flex-row justify-center section_8">
+        <div class="image-text_17 flex-col">
           <img
-            class="image_4"
+            class="image_3"
             referrerpolicy="no-referrer"
             src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
-          <span class="text-group_2">上传国徽面</span>
+          <span class="text-group_1">上传国徽面</span>
         </div>
+        <uni-file-picker class="picker" limit="1" :auto-upload="false"></uni-file-picker>
+
       </div>
-    </div>
-    <div class="box_4 flex-row">
-      <div class="image-text_19 flex-col">
-        <img
-          class="image_5"
-          referrerpolicy="no-referrer"
-          src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
-        <span class="text-group_3">上传银行卡正面</span>
+      <div class="align-center flex-row justify-center section_8">
+        <div class="image-text_17 flex-col">
+          <img
+            class="image_3"
+            referrerpolicy="no-referrer"
+            src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
+          <span class="text-group_1">上传银行卡正面</span>
+        </div>
+        <uni-file-picker class="picker" limit="1" :auto-upload="false"></uni-file-picker>
       </div>
     </div>
     <span class="text_25">银行卡开户行</span>
-    <span class="text_26">请输入银行卡开户行</span>
+    <rs-input class="text_26" placeholder="请输入银行卡开户行"></rs-input>
     <div class="block_6 flex-col"></div>
   </div>
 </template>
 <script>
+import rsInput from "@/components/rs-input/rs-input";
+
 export default {
+  components: {
+    rsInput,
+  },
   name: "f-basic",
   data() {
     return {
@@ -55,6 +62,9 @@ export default {
   methods: {
     changeVisible() {
       this.visible = !this.visible;
+    },
+    onUpdatePic(event, type) {
+      console.log(event, type);
     },
   },
 };
@@ -112,13 +122,44 @@ export default {
 
   .group_13 {
     width: 650rpx;
-    margin: 41rpx 0 0 1rpx;
+    flex-wrap: wrap;
 
     .section_8 {
+      margin-top: 40rpx;
       background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng316d2332d57a20754dc0c2e7c611f92362d53edf4ed7df65ce27614df6dc0a69)
         100% no-repeat;
       background-size: 100% 100%;
-      padding: 45rpx 97rpx 44rpx 95rpx;
+      width: 160px;
+      height: 102px;
+      position: relative;
+
+      &:nth-child(2) {
+        background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng60663263e8d60205a5c931d2c4d22c87fd9e686482d566200cc7394e0762d2f1)
+          100% no-repeat;
+        background-size: 100% 100%;
+      }
+
+      &:nth-child(3) {
+        background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngefc7215121e19eec0433712112b02cbcbffcb1d4843ffa862ae42140ce617f53)
+          100% no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .picker {
+        position: absolute;
+        width: 160px;
+        height: 102px;
+        ::v-deep .uni-file-picker__container {
+          margin: 0;
+          .file-picker__box {
+            width: 160px !important;
+            height: 102px !important;
+            .is-add {
+              opacity: 0;
+            }
+          }
+        }
+      }
 
       .image-text_17 {
         .image_3 {
@@ -138,61 +179,6 @@ export default {
           line-height: 33rpx;
           margin-top: 13rpx;
         }
-      }
-    }
-
-    .section_9 {
-      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng60663263e8d60205a5c931d2c4d22c87fd9e686482d566200cc7394e0762d2f1)
-        100% no-repeat;
-      background-size: 100% 100%;
-      padding: 45rpx 96rpx 44rpx 96rpx;
-
-      .image-text_18 {
-        .image_4 {
-          width: 66rpx;
-          height: 66rpx;
-          align-self: center;
-        }
-
-        .text-group_2 {
-          overflow-wrap: break-word;
-          color: rgba(249, 101, 30, 1);
-          font-size: 24rpx;
-          font-family: PingFangSC-Medium;
-          font-weight: 500;
-          text-align: left;
-          white-space: nowrap;
-          line-height: 33rpx;
-          margin-top: 13rpx;
-        }
-      }
-    }
-  }
-
-  .box_4 {
-    background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngefc7215121e19eec0433712112b02cbcbffcb1d4843ffa862ae42140ce617f53)
-      100% no-repeat;
-    background-size: 100% 100%;
-    margin: 20rpx 338rpx 0 1rpx;
-    padding: 44rpx 72rpx 45rpx 72rpx;
-
-    .image-text_19 {
-      .image_5 {
-        width: 66rpx;
-        height: 66rpx;
-        align-self: center;
-      }
-
-      .text-group_3 {
-        overflow-wrap: break-word;
-        color: rgba(249, 101, 30, 1);
-        font-size: 24rpx;
-        font-family: PingFangSC-Medium;
-        font-weight: 500;
-        text-align: right;
-        white-space: nowrap;
-        line-height: 33rpx;
-        margin-top: 13rpx;
       }
     }
   }
@@ -217,14 +203,23 @@ export default {
     text-align: justify;
     white-space: nowrap;
     line-height: 40rpx;
-    margin: 38rpx 398rpx 0 1rpx;
+    margin-top: 10rpx;
   }
 
   .block_6 {
     background-color: rgba(233, 233, 233, 1);
     width: 649rpx;
     height: 1rpx;
-    margin: 22rpx 0 0 2rpx;
+    // margin-top: 10rpx;
+  }
+
+  ::v-deep .rs-input {
+    padding: 0 0;
+    .rs-input--input {
+      padding: 0 26rpx;
+      // background-color: rgb(249, 249, 249);
+      border-radius: 10rpx;
+    }
   }
 }
 </style>
