@@ -5,6 +5,11 @@ export default Vue.extend({
   mpType: "app",
   onLaunch() {
     console.log("App Launch");
+    // #ifndef APP-NVUE
+
+    uni.requireNativePlugin = () => {};
+
+    // #endif
   },
   onShow() {
     console.log("App Show");
