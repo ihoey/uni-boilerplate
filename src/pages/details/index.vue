@@ -11,7 +11,7 @@
         <text class="text_1">图片{{ currentSwiperIndex }}/{{ swiperList.length }}</text>
       </view>
       <swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
-              :duration="duration" @change="onSwiperChange">
+        :duration="duration" @change="onSwiperChange">
         <block v-for="item in swiperList" :key="item">
           <swiper-item>
             <image class="swiper-item " :src="item">
@@ -48,23 +48,23 @@
         <view class="box_4 flex-row justify-between">
           <view class="image-text_19 flex-row justify-between">
             <image class="label_1" referrerpolicy="no-referrer"
-                   src="/static/images/details/SketchPngac87b85df7a1bc8b98a10c97322da80517b5d2132ca8bf34b52b2068aceaef54.png" />
+              src="/static/images/details/SketchPngac87b85df7a1bc8b98a10c97322da80517b5d2132ca8bf34b52b2068aceaef54.png" />
             <text class="text-group_2">信息审核</text>
           </view>
           <text class="text_9">基础信息已核实{{ statusMessage }}</text>
         </view>
         <image class="image_4" referrerpolicy="no-referrer"
-               src="/static/images/details/SketchPng6a9957d9ade600408d418b32bb1bbf2ed80241932005d60d05d6b93bec3dd59e.png" />
+          src="/static/images/details/SketchPng6a9957d9ade600408d418b32bb1bbf2ed80241932005d60d05d6b93bec3dd59e.png" />
       </view>
       <view class="group_2 flex-row">
         <view class="image-text_20 flex-col" @click="switchTab('/pages/index/index')">
           <image class="label_4" referrerpolicy="no-referrer"
-                 src="/static/images/details/SketchPng60684e3b3edebcc91af51c04387d7c289ad4fbce5ff0b64b82a744a5b83661b8.png" />
+            src="/static/images/details/SketchPng60684e3b3edebcc91af51c04387d7c289ad4fbce5ff0b64b82a744a5b83661b8.png" />
           <text class="text-group_3">首页</text>
         </view>
         <view class="image-text_21 flex-col">
           <image class="label_5" referrerpolicy="no-referrer"
-                 src="/static/images/details/SketchPnga8f90a1c9592c21cefdd58146710ec1de0ed4475ee2beb8ac1935a7fa31d8f8d.png" />
+            src="/static/images/details/SketchPnga8f90a1c9592c21cefdd58146710ec1de0ed4475ee2beb8ac1935a7fa31d8f8d.png" />
           <text class="text-group_4">{{ message.sforwardNum }}次</text>
         </view>
         <button class="text-wrapper_3 flex-col" @click="onClick_1">
@@ -75,7 +75,7 @@
   </view>
 </template>
 <script>
-import { getInfo, getInfos } from "@/apis/detail";
+import { getInfo } from "@/apis/detail";
 
 export default {
   data() {
@@ -149,7 +149,9 @@ export default {
   },
   mounted() {
     // console.log(this);
-    // getInfo(10004).then((res) => {});
+    getInfo().then((res) => {
+      console.log("res :>> ", res);
+    });
     this.handleMessage();
   },
   methods: {

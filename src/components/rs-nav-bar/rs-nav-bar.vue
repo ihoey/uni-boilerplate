@@ -40,7 +40,7 @@ export default {
   },
   computed: {
     systemInfo() {
-      return this.$store.state.systemInfo;
+      // return this.$store.state.systemInfo;
     },
     statusBarHeight() {
       if (this.systemInfo) {

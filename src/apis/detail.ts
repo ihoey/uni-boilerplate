@@ -1,6 +1,7 @@
 import { get } from "./request";
 
 export const getInfo = () => {
-  return get("/11", {}, {});
+  console.log("mmmmmm :>> ");
+  return get("/xsc/xsc/homePageItem", {}, {});
 };
 export const getInfos = () => {};

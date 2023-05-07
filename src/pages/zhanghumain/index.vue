@@ -70,6 +70,12 @@ export default {
       this.showMode = true;
     },
   },
+  mounted() {
+    console.log("this.$popppp :>> ");
+    this.$nextTick(() => {
+      console.log("this.$popppp :>> ", this.$refs);
+    });
+  },
 };
 </script>
 <style lang="scss">

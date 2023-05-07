@@ -1,10 +1,10 @@
 <template>
   <div class="">
-    <van-popup
-      :show="showMode"
+    <!-- custom-style="height: 60%;border-radius:4px" -->
+    <uni-popup
       round
-      position="bottom"
-      custom-style="height: 60%;border-radius:4px"
+      ref="popppp"
+      type="bottom"
       @close="onClose">
       <div class="group_7 flex-col">
         <div class="text-wrapper_7 flex-row justify-between">
@@ -36,9 +36,9 @@
           </div>
         </div>
       </div>
-    </van-popup>
+    </uni-popup>
 
-    <van-calendar className="calendar" :show="showcalendar" @close="onClosecalendar" @confirm="onConfirm" />
+    <!-- <van-calendar className="calendar" :show="showcalendar" @close="onClosecalendar" @confirm="onConfirm" /> -->
 
   </div>
 </template>
@@ -125,8 +125,8 @@ export default {
 <style lang="scss">
 @import "../common/common.scss";
 .group_16 {
-  width: 646px;
-  margin: 39px 6px 0 0;
+  width: 646rpx;
+  margin: 39rpx 6rpx 0 0;
 }
 .van-popup {
   border-radius: 12rpx !important;
@@ -135,122 +135,122 @@ export default {
 .text_33 {
   overflow-wrap: break-word;
   color: rgba(102, 102, 102, 1);
-  font-size: 28px;
+  font-size: 28rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 40px;
+  line-height: 40rpx;
 }
 .text_32 {
   overflow-wrap: break-word;
   color: rgba(102, 102, 102, 1);
-  font-size: 28px;
+  font-size: 28rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 40px;
+  line-height: 40rpx;
 }
 
 .text-wrapper_5 {
   background-color: rgba(238, 239, 244, 1);
-  border-radius: 10px;
-  padding: 18px 62px 18px 62px;
+  border-radius: 10rpx;
+  padding: 18rpx 62rpx 18rpx 62rpx;
 }
 
 .text-wrapper_3 {
   background-color: rgba(238, 239, 244, 1);
-  border-radius: 10px;
-  // border: 1px solid rgba(233, 73, 69, 1);
-  padding: 17px 61px 17px 61px;
-  border: 1px solid rgba(238, 239, 244, 1);
+  border-radius: 10rpx;
+  // border: 1rpx solid rgba(233, 73, 69, 1);
+  padding: 17rpx 61rpx 17rpx 61rpx;
+  border: 1rpx solid rgba(238, 239, 244, 1);
 }
 
 .text_31 {
   overflow-wrap: break-word;
   color: rgba(102, 102, 102, 1);
-  font-size: 28px;
+  font-size: 28rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 40px;
+  line-height: 40rpx;
 }
 
 .text-wrapper_4 {
   background-color: rgba(238, 239, 244, 1);
-  border-radius: 10px;
-  padding: 18px 62px 18px 62px;
+  border-radius: 10rpx;
+  padding: 18rpx 62rpx 18rpx 62rpx;
 }
 .group_7 {
   background-color: rgba(255, 255, 255, 1);
-  border-radius: 12px 12px 0px 0px;
-  padding: 50px 49px 132px 49px;
+  border-radius: 12rpx 12rpx 0rpx 0rpx;
+  padding: 50rpx 49rpx 132rpx 49rpx;
 }
 .text-wrapper_7 {
-  width: 652px;
-  // padding-bottom: 50px;
+  width: 652rpx;
+  // padding-bottom: 50rpx;
 }
 
 .group_14 {
-  margin: 60px 14px 0 0;
+  margin: 60rpx 14rpx 0 0;
 }
 
 .text_23 {
   overflow-wrap: break-word;
   color: rgba(153, 153, 153, 1);
-  font-size: 32px;
+  font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 45px;
+  line-height: 45rpx;
 }
 .text_25 {
   overflow-wrap: break-word;
   color: rgba(249, 101, 30, 1);
-  font-size: 32px;
+  font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 45px;
+  line-height: 45rpx;
 }
 .text_26 {
   overflow-wrap: break-word;
   color: rgba(51, 51, 51, 1);
-  font-size: 30px;
+  font-size: 30rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 42px;
+  line-height: 42rpx;
 }
 .text_30 {
   overflow-wrap: break-word;
   color: rgba(51, 51, 51, 1);
-  font-size: 30px;
+  font-size: 30rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 42px;
-  margin: 64px 532px 0 0;
+  line-height: 42rpx;
+  margin: 64rpx 532rpx 0 0;
 }
 .text_27 {
   overflow-wrap: break-word;
   color: rgba(102, 102, 102, 1);
-  font-size: 30px;
+  font-size: 30rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   text-align: right;
   white-space: nowrap;
-  line-height: 42px;
-  margin-left: 70px;
+  line-height: 42rpx;
+  margin-left: 70rpx;
 }
 .active {
-  border: 1px solid rgba(233, 73, 69, 1);
+  border: 1rpx solid rgba(233, 73, 69, 1);
 
   .text_31 {
     color: rgba(233, 73, 69, 1);
