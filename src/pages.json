@@ -28,8 +28,9 @@
     {
       "path": "pages/huigu/index",
       "style": {
-        "navigationBarTitleText": "回顾",
+        "navigationBarTitleText": "捐款回顾",
         "enablePullDownRefresh": false,
+        // "navigationBarBackgroundColor": "#e76b35",
         "navigationStyle": "custom"
       }
     },
