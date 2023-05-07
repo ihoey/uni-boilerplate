@@ -12,7 +12,7 @@
     </div>
     <!-- <span class="text_10"></span> -->
     <!-- {{ valueNum }} -->
-    <rs-input v-modal="valueNum" @input="input" class="text_10" placeholder="请填写所需爱心包数量"></rs-input>
+    <rs-input v-model="valueNum" @input="input" class="text_10" placeholder="请填写所需爱心包数量"></rs-input>
     <div class="block_2 flex-col"></div>
     <span class="text_11">捐赠时间</span>
     <!-- <uni-section :title="'日期范围用法：' + '[' + range + ']'" type="line"></uni-section> -->
