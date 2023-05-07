@@ -7,7 +7,7 @@
         <view class="group_3">
           <view class="text-group_7">
             <text lines="1" class="text_2">{{ constants.subProject.mainItemName }}</text>
-            <text lines="1" class="text_3">{{ constants.subProject.story }}</text>
+            <text lines="1" class="text_3 ellipsis">{{ constants.subProject.story }}</text>
           </view>
           <button bindtap="onClick" class="text-wrapper_1">
             <text lines="1" class="text_4">再次捐款</text>
@@ -75,7 +75,6 @@
   </view>
 </template>
 <script>
-
 import rsNavBar from "@/components/rs-nav-bar/rs-nav-bar";
 
 export default {
@@ -85,97 +84,98 @@ export default {
   data() {
     return {
       constants: {
-        "invoiceInfo": {
-            "searchValue": null,
-            "createBy": null,
-            "createTime": null,
-            "updateBy": null,
-            "updateTime": null,
-            "remark": null,
-            "params": {},
-            "startDate": null,
-            "endDate": null,
-            "start": null,
-            "end": null,
-            "id": "1",
-            "openId": "1",
-            "mainItemId": "1",
-            "subProjectId": null,
-            "drawerName": null,
-            "invoiceTime": null,
-            "subject": "111",
-            "withdrawType": "1",
-            "title": "111",
-            "creditCode": "111",
-            "email": "123@163.com",
-            "phone": "13514845151",
-            "invoiceAmount": null,
-            "invoiceMethod": null
+        invoiceInfo: {
+          searchValue: null,
+          createBy: null,
+          createTime: null,
+          updateBy: null,
+          updateTime: null,
+          remark: null,
+          params: {},
+          startDate: null,
+          endDate: null,
+          start: null,
+          end: null,
+          id: "1",
+          openId: "1",
+          mainItemId: "1",
+          subProjectId: null,
+          drawerName: null,
+          invoiceTime: null,
+          subject: "111",
+          withdrawType: "1",
+          title: "111",
+          creditCode: "111",
+          email: "123@163.com",
+          phone: "13514845151",
+          invoiceAmount: null,
+          invoiceMethod: null,
         },
-        "certificateStatus": "1",
-        "subProject": {
-            "searchValue": null,
-            "createBy": null,
-            "createTime": null,
-            "updateBy": null,
-            "updateTime": null,
-            "remark": null,
-            "params": {},
-            "startDate": null,
-            "endDate": null,
-            "start": null,
-            "end": null,
-            "id": null,
-            "subProjectId": "10001",
-            "fundraisingTitle": "孤寡老人的爱心医疗救治计划啊啊啊啊啊啊啊啊啊啊啊啊",
-            "mainItemId": null,
-            "mainItemName": '哈哈',
-            "openId": "1",
-            "fundraisingAmount": 3000000,
-            "story": "一间狭小又破旧的房屋，屋内的陈设也乱七八糟，墙上到处挂满了蜘蛛网，一张古老又陈旧的老式床，零零散散的挂着一些衣服，床单被套没有叠整，看起来乱糟糟的。",
-            "projectType": "2",
-            "initiatorJob": "公务员",
-            "relationship": "admin",
-            "fundraisingMessage": "照顾老人",
-            "donorTime": "2023-04-04 17:50:30-2024-04-04 17:50:30",
-            "lbNumber": "30",
-            "availableLbNum": "3",
-            "projectProcess": "30%",
-            "loveSort": "3",
-            "homeSort": "4",
-            "lbAmount": 100,
-            "loveDisplay": "1",
-            "homeDisplay": "1",
-            "labelIds": "1,2,3",
-            "auditStatus": "1",
-            "forwardNum": "15",
-            "appletImg": [
-                {
-                    "searchValue": null,
-                    "createBy": null,
-                    "createTime": null,
-                    "updateBy": null,
-                    "updateTime": null,
-                    "remark": null,
-                    "params": {},
-                    "startDate": null,
-                    "endDate": null,
-                    "start": null,
-                    "end": null,
-                    "id": null,
-                    "openId": "1",
-                    "subProjectId": "10001",
-                    "mainItemId": null,
-                    "imgType": "10",
-                    "filePath": "456"
-                }
-            ]
+        certificateStatus: "1",
+        subProject: {
+          searchValue: null,
+          createBy: null,
+          createTime: null,
+          updateBy: null,
+          updateTime: null,
+          remark: null,
+          params: {},
+          startDate: null,
+          endDate: null,
+          start: null,
+          end: null,
+          id: null,
+          subProjectId: "10001",
+          fundraisingTitle:
+            "孤寡老人的爱心医疗救治计划啊啊啊啊啊啊啊啊啊啊啊啊",
+          mainItemId: null,
+          mainItemName: "哈哈",
+          openId: "1",
+          fundraisingAmount: 3000000,
+          story:
+            "一间狭小又破旧的房屋，屋内的陈设也乱七八糟，墙上到处挂满了蜘蛛网，一张古老又陈旧的老式床，零零散散的挂着一些衣服，床单被套没有叠整，看起来乱糟糟的。",
+          projectType: "2",
+          initiatorJob: "公务员",
+          relationship: "admin",
+          fundraisingMessage: "照顾老人",
+          donorTime: "2023-04-04 17:50:30-2024-04-04 17:50:30",
+          lbNumber: "30",
+          availableLbNum: "3",
+          projectProcess: "30%",
+          loveSort: "3",
+          homeSort: "4",
+          lbAmount: 100,
+          loveDisplay: "1",
+          homeDisplay: "1",
+          labelIds: "1,2,3",
+          auditStatus: "1",
+          forwardNum: "15",
+          appletImg: [
+            {
+              searchValue: null,
+              createBy: null,
+              createTime: null,
+              updateBy: null,
+              updateTime: null,
+              remark: null,
+              params: {},
+              startDate: null,
+              endDate: null,
+              start: null,
+              end: null,
+              id: null,
+              openId: "1",
+              subProjectId: "10001",
+              mainItemId: null,
+              imgType: "10",
+              filePath: "456",
+            },
+          ],
         },
-        "oldManName": "张三",
-        "messageContent": "祝您身体安康！",
-        "total":"1000.00"
-    }
-,
+        oldManName: "张三",
+        messageContent: "祝您身体安康！",
+        total: "1000.00",
+      },
     };
   },
   mounted() {
@@ -185,7 +185,7 @@ export default {
     xing(phoneNumber) {
       let xx = phoneNumber;
       console.log("phoneNumber :>> ", phoneNumber, xx);
-      return xx.replace(/^(\d{3})\d{4}(\d+)/,"$1****$2");
+      return xx.replace(/^(\d{3})\d{4}(\d+)/, "$1****$2");
     },
     toPath(url) {
       wx.navigateTo({
@@ -200,7 +200,6 @@ export default {
     onClick_1() {
       alert(1);
     },
-
   },
 };
 </script>

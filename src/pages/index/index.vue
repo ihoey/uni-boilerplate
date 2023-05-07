@@ -10,7 +10,23 @@
           <div>小善筹共帮助家庭 1000 个</div>
           <img src="/static/images/sousuo.png" class="sousuo" alt="">
         </div>
-        <img class="advertisement" src="/static/images/advertisement.png" alt />
+        <swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
+          :duration="duration">
+          <swiper-item>
+            <view class="swiper-item uni-bg-red">
+              <img class="advertisement" src="/static/images/advertisement.png" alt />
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class="swiper-item uni-bg-green">
+              <img class="advertisement" src="/static/images/advertisement.png" alt />
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class="swiper-item uni-bg-blue"> <img class="advertisement" src="/static/images/advertisement.png" alt /></view>
+          </swiper-item>
+        </swiper>
+
         <div class="m-t-30  d-flex justify-content-between project-list-header">
           <div>最新筹款项目</div>
           <div>
@@ -28,8 +44,10 @@
                 孤寡老人的医疗救治计划
                 <van-icon name="arrow" />
               </div>
-              <div class="list-item-desc">
-                为孤寡老人、失能失智老人提供基础医疗服务行动
+              <div class="list-item-desc  ellipsis">
+                为孤寡老人、失能失智老人提供基础医疗服务失智老人提供基础医疗服务失智老人提供基础医疗服务行动
+                为孤寡老人、失能失智老人提供基础医疗服务失智老人提供基础医疗服务失智老人提供基础医疗服务行动
+                为孤寡老人、失能失智老人提供基础医疗服务失智老人提供基础医疗服务失智老人提供基础医疗服务行动
               </div>
               <!-- <van-button color="linear-gradient(to right, #FA9C4E, #F36326 ) font-size:" size="small">
 
@@ -49,7 +67,7 @@
               </div>
               <div class="raise-funds-project-info">
                 <div class="raise-funds-project-title">孤寡老人的医疗救治计划</div>
-                <div class="raise-funds-project-desc">为孤寡老人、失能失智老人提供基础医疗服务备份</div>
+                <div class="raise-funds-project-desc ellipsis">为孤寡老人、失能失智老人提供基础医疗服务备份</div>
               </div>
 
               <button type="default" class="btnC"> 帮TA</button>
@@ -68,14 +86,33 @@ import tabBar from "@/components/custom-tab-bar";
 
 export default {
   data() {
-    return {};
+    return {
+      background: ["color1", "color2", "color3"],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 2000,
+      duration: 500,
+    };
   },
 
   components: {
     tabBar,
   },
 
-  methods: {},
+  methods: {
+    changeIndicatorDots(e) {
+      this.indicatorDots = !this.indicatorDots;
+    },
+    changeAutoplay(e) {
+      this.autoplay = !this.autoplay;
+    },
+    intervalChange(e) {
+      this.interval = e.target.value;
+    },
+    durationChange(e) {
+      this.duration = e.target.value;
+    },
+  },
   created() {
     wx.hideTabBar();
   },
@@ -86,7 +123,16 @@ export default {
 .content {
   padding-bottom: 200rpx;
   background: #f9f9f9;
-
+  ::v-deep .swiper {
+    height: 325rpx;
+  }
+  .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
   .content-body {
     margin-top: -629rpx;
     width: 100%;

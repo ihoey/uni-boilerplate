@@ -2,14 +2,6 @@
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "pages/my/name/index",
-      "style": {
-        "navigationBarTitleText": "名称",
-        "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/zhanghumain/index",
       "style": {
         "navigationBarTitleText": "账户明细",
@@ -17,6 +9,39 @@
         "navigationStyle": "custom"
       }
     },
+    {
+      "path": "pages/my/info/index",
+      "style": {
+        "navigationBarTitleText": "信息",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/juankuanDetail/index",
+      "style": {
+        "navigationBarTitleText": "捐款详情",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/my/name/index",
+      "style": {
+        "navigationBarTitleText": "名称",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+
     {
       "path": "pages/xingdong/index",
       "style": {
@@ -41,14 +66,7 @@
         "navigationStyle": "custom"
       }
     },
-    {
-      "path": "pages/juankuanDetail/index",
-      "style": {
-        "navigationBarTitleText": "捐款详情",
-        "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
-      }
-    },
+
     {
       "path": "pages/my/phone/index",
       "style": {
@@ -58,14 +76,6 @@
       }
     },
 
-    {
-      "path": "pages/my/info/index",
-      "style": {
-        "navigationBarTitleText": "信息",
-        "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
-      }
-    },
     // {
     //   "path": "pages/juankuan/index",
     //   "style": {
@@ -98,14 +108,7 @@
         "navigationStyle": "custom"
       }
     },
-    {
-      "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "首页",
-        "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
-      }
-    },
+
     {
       "path": "pages/loveProject/index",
       "style": {

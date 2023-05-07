@@ -51,8 +51,9 @@
     </view>
     <!-- <van-dialog id="van-dialog" /> -->
     <!-- <uni-popup ref="popup" type="bottom">底部弹出 Popup</uni-popup> -->
-    <uni-popup ref="popup" type="dialog">
-      <uni-popup-dialog mode="input" message="成功消息" :duration="2000" :before-close="true" @close="close" @confirm="confirm"></uni-popup-dialog>
+    <uni-popup ref="inputDialog" type="dialog">
+      <uni-popup-dialog ref="inputClose" mode="input" title="输入内容" value="对话框预置提示内容!"
+        placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
     </uni-popup>
   </view>
 </template>
@@ -118,19 +119,27 @@ export default {
       alert(1);
     },
     logout() {
-      // this.$refs.popup.open("top");
-      // Dialog.confirm({
-      //   // title: "标题",
-      //   message: "确定退出登录？",
-      //   confirmButtonText: "退出登录",
-      //   cancelButtonText: "取消",
-      // })
-      //   .then(() => {
-      //     // on confirm
-      //   })
-      //   .catch(() => {
-      //     // on cancel
-      //   });
+      this.$nextTick(() => {
+        console.log(" this.$refs.inputDialog :>> ", this.$refs.inputDialog);
+        this.$refs.inputDialog.open();
+      });
+    },
+    close() {
+      // TODO 做一些其他的事情，before-close 为true的情况下，手动执行 close 才会关闭对话框
+      // ...
+      this.$refs.inputDialog.close();
+    },
+    /**
+     * 点击确认按钮触发
+     * @param {Object} done
+     * @param {Object} value
+     */
+    confirm(value) {
+      // 输入框的值
+      console.log(value);
+      // TODO 做一些其他的事情，手动执行 close 才会关闭对话框
+      // ...
+      this.$refs.inputDialog.close();
     },
   },
 };

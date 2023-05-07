@@ -11,7 +11,7 @@ import { getToken } from "@/utils/permission";
  * 服务器根路径
  */
 // export const BASE_URL = "http://localhost:3000/api/v1";
-export const BASE_URL = "http://localhost:3000/api/v1";
+export const BASE_URL = "https://728a57d478.zicp.fun";
 export const DOMAIN_NAME = "这里需要填写真实服务器地址，用来上传图片";
 
 /**
@@ -69,12 +69,7 @@ export function requestWithModal(method: string, relativeUrl: any, param: any, h
  * @param header 请求头参数 可选
  * @returns {Promise} 返回响应完整内容
  */
-export function request(
-  method: any,
-  relativeUrl: string,
-  param: { [x: string]: any },
-  header: any
-): Promise<any> {
+export function request(method: any, relativeUrl: string, param: { [x: string]: any }, header: any): Promise<any> {
   // 删除所有为 null 的参数
   for (var key in param) {
     if (param[key] === null) {
