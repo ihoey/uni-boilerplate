@@ -23,7 +23,7 @@ export default {
       default: "请上传",
     },
     limit: {
-      default: 1,
+      default: 9,
     },
   },
 

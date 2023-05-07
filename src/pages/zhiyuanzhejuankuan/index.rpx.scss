@@ -1,0 +1,70 @@
+.page {
+  background-color: rgba(241, 242, 243, 1);
+  position: relative;
+  width: 750rpx;
+
+  // background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng87dc4dfee6e9449c212cd9bbf3ca8d1b8552f46a5d23e5501b2b31a484631996);
+
+  .image-text_16 {
+    width: 345rpx;
+    margin: 29rpx 356rpx 0 49rpx;
+
+    .checkbox_1 {
+      ::v-deep .uni-checkbox-input {
+        border-radius: 50%;
+      }
+    }
+
+    .text_17 {
+      overflow-wrap: break-word;
+      color: rgba(153, 153, 153, 1);
+      font-size: 24rpx;
+      font-weight: NaN;
+      text-align: justify;
+      white-space: nowrap;
+      line-height: 33rpx;
+    }
+  }
+
+  .text-wrapper_6 {
+    width: 750rpx;
+    height: 77rpx;
+    margin-top: 10rpx;
+
+    .text_18 {
+      height: 33rpx;
+      overflow-wrap: break-word;
+      color: rgba(249, 101, 30, 1);
+      font-size: 24rpx;
+      font-weight: NaN;
+      text-align: justify;
+      white-space: nowrap;
+      line-height: 33rpx;
+      margin: -11rpx 135rpx 55rpx 50rpx;
+    }
+  }
+
+  .section_6 {
+    box-shadow: 0px 0px 4px 0px rgba(219, 219, 219, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 76rpx;
+    padding: 24rpx 30rpx 56rpx 30rpx;
+
+    .button_1 {
+      background-image: linear-gradient(270deg, rgba(250, 156, 78, 1) 0, rgba(243, 99, 38, 1) 100%);
+      border-radius: 38px;
+      padding: 17rpx 280rpx 16rpx 280rpx;
+
+      .text_19 {
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 32rpx;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 45rpx;
+      }
+    }
+  }
+}

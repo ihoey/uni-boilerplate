@@ -7,16 +7,13 @@
         referrerpolicy="no-referrer"
         src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnga3a0a7d64d472853d20b83eba0a03b8649bdd5d41e2f9bc445bbe2f40f37beff" />
     </div>
-    <span v-show="visible" class="text_21">上传证件进行身份识别，请保证照片完整、清晰、无反光；我们将依法保障您的信息安全。</span>
+    <span v-show="visible" class="text_21">可上传多张</span>
     <div class="group_13 flex-row justify-between">
-      <f-upload class="zm" placeholder="上传人像面" limit="1"></f-upload>
-      <f-upload class="fm" placeholder=" 上传国徽面" limit="1"></f-upload>
-      <f-upload class="yhk" placeholder="上传银行卡正面" limit="1"></f-upload>
+      <f-upload class="zm1" placeholder="请上传医疗病例"></f-upload>
+      <f-upload class="fm1" placeholder=" 请上传残障证明"></f-upload>
+      <f-upload class="yhk1" placeholder="请上传辅助证明"></f-upload>
 
     </div>
-    <span class="text_25">银行卡开户行</span>
-    <rs-input class="text_26" placeholder="请输入银行卡开户行"></rs-input>
-    <div class="block_6 flex-col"></div>
   </div>
 </template>
 <script>
@@ -92,7 +89,7 @@ export default {
 
   .text_21 {
     width: 651rpx;
-    height: 80rpx;
+    // height: 80rpx;
     overflow-wrap: break-word;
     color: rgba(153, 153, 153, 1);
     font-size: 24rpx;

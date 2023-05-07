@@ -1,7 +1,9 @@
 <template>
   <div class="page flex-col">
-    <rs-nav-bar title="发起筹款" @back="back" />
-    <f-basic></f-basic>
+    <rs-nav-bar title="志愿者筹款" @back="back" />
+    <f-provemsg title="请填写志愿者信息"></f-provemsg>
+    <f-basic title="请上传老人基础信息"></f-basic>
+    <f-prove title="请上传辅助证明"></f-prove>
     <f-title></f-title>
     <f-package></f-package>
     <f-slogan></f-slogan>
@@ -25,10 +27,12 @@
 
 <script>
 import rsNavBar from "@/components/rs-nav-bar/rs-nav-bar";
-import fBasic from "./components/basic";
-import fTitle from "./components/title";
-import fPackage from "./components/package";
-import fSlogan from "./components/slogan.vue";
+import fBasic from "@/components/juankuan/basic";
+import fTitle from "@/components/juankuan/title";
+import fPackage from "@/components/juankuan/package";
+import fSlogan from "@/components/juankuan/slogan";
+import fProve from "@/components/juankuan/prove";
+import fProvemsg from "@/components/juankuan/provemsg";
 
 export default {
   components: {
@@ -37,6 +41,8 @@ export default {
     fTitle,
     fPackage,
     fSlogan,
+    fProve,
+    fProvemsg,
   },
   data() {
     return {

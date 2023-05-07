@@ -9,6 +9,14 @@
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
+      "path": "pages/zhiyuanzhejuankuan/index",
+      "style": {
+        "navigationBarTitleText": "志愿者筹款",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/addjuankuan/index",
       "style": {
         "navigationBarTitleText": "发起捐款",
