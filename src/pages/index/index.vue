@@ -31,9 +31,10 @@
               <div class="list-item-desc">
                 为孤寡老人、失能失智老人提供基础医疗服务行动
               </div>
-              <van-button color="linear-gradient(to right, #FA9C4E, #F36326 )" size="small">
-                立即帮助
-              </van-button>
+              <!-- <van-button color="linear-gradient(to right, #FA9C4E, #F36326 ) font-size:" size="small">
+
+              </van-button> -->
+              <button type="default" class="btnC">立即帮助</button>
             </div>
           </div>
         </div>
@@ -50,9 +51,8 @@
                 <div class="raise-funds-project-title">孤寡老人的医疗救治计划</div>
                 <div class="raise-funds-project-desc">为孤寡老人、失能失智老人提供基础医疗服务备份</div>
               </div>
-              <van-button color="linear-gradient(to right, #FA9C4E, #F36326 )" size="small">
-                帮TA
-              </van-button>
+
+              <button type="default" class="btnC"> 帮TA</button>
             </div>
           </div>
         </div>
@@ -84,76 +84,76 @@ export default {
 
 <style lang="scss">
 .content {
-  padding-bottom: 200px;
+  padding-bottom: 200rpx;
   background: #f9f9f9;
 
   .content-body {
-    margin-top: -629px;
+    margin-top: -629rpx;
     width: 100%;
     text-align: center;
 
     .content-body-header {
       display: flex;
       justify-content: space-between;
-      padding: 0 49px 0 25px;
+      padding: 0 49rpx 0 25rpx;
       font-weight: 400;
       color: #ffffff;
-      font-size: 30px;
-      margin-bottom: 30px;
+      font-size: 30rpx;
+      margin-bottom: 30rpx;
 
       .sousuo {
-        height: 40px;
-        width: 40px;
+        height: 40rpx;
+        width: 40rpx;
       }
     }
 
     .advertisement {
-      width: 710px;
-      height: 320px;
+      width: 710rpx;
+      height: 320rpx;
     }
 
     .project-list-header {
-      padding: 0 20px;
-      margin-bottom: 20px;
+      padding: 0 20rpx;
+      margin-bottom: 20rpx;
 
       div {
         color: #333333;
-        font-size: 32px;
+        font-size: 32rpx;
         font-weight: 500;
       }
 
       & > div:nth-child(2) {
         color: #999999;
-        font-size: 28px;
+        font-size: 28rpx;
         font-weight: 400;
       }
     }
 
     .project-list-content {
-      padding: 0 20px;
+      padding: 0 20rpx;
     }
 
     .project-list-item {
-      width: calc(100% - 40px);
+      width: calc(100% - 40rpx);
       background: #ffffff;
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 12rpx;
+      padding: 20rpx;
       text-align: left;
       position: relative;
-      margin-bottom: 10px;
+      margin-bottom: 10rpx;
 
       .list-item-img {
-        width: 244px;
-        height: 198px;
-        margin-right: 20px;
+        width: 244rpx;
+        height: 198rpx;
+        margin-right: 20rpx;
       }
 
       .list-item-title {
-        font-size: 28px;
+        font-size: 28rpx;
         font-weight: 500;
         color: #333333;
-        margin-top: 8px;
-        margin-bottom: 15px;
+        margin-top: 8rpx;
+        margin-bottom: 15rpx;
         display: flex;
         justify-content: space-between;
       }
@@ -162,27 +162,19 @@ export default {
         font-weight: 400;
         color: #999999;
         line-height: 1.4;
-      }
-
-      ::v-deep .van-button {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        border-radius: 33px;
-        width: 175px;
-        height: 60px;
+        font-size: 24rpx;
       }
     }
 
     .raise-funds-project {
-      padding: 0 20px 40px;
+      padding: 0 20rpx 40rpx;
 
       .title {
-        font-size: 32px;
+        font-size: 32rpx;
         font-weight: 500;
         color: #333333;
         text-align: left;
-        margin-top: 10px;
+        margin-top: 10rpx;
       }
 
       .raise-funds-project-content {
@@ -191,19 +183,19 @@ export default {
         flex-flow: wrap;
 
         .raise-funds-project-item {
-          padding: 20px 14px 14px;
-          width: calc(350px - 28px);
-          margin-top: 20px;
+          padding: 20rpx 14rpx 14rpx;
+          width: calc(350rpx - 28rpx);
+          margin-top: 20rpx;
           display: flex;
           flex-direction: column;
           position: relative;
-          min-height: 428px;
+          min-height: 428rpx;
           background: #ffffff;
-          border-radius: 12px;
+          border-radius: 12rpx;
 
           ::v-deep .van-image {
-            width: 322px;
-            height: 210px;
+            width: 322rpx;
+            height: 210rpx;
           }
 
           .raise-funds-project-info {
@@ -212,57 +204,74 @@ export default {
             .raise-funds-project-title {
               font-weight: 500;
               color: #333333;
-              font-size: 26px;
-              margin-top: 16px;
-              margin-bottom: 10px;
+              font-size: 26rpx;
+              margin-top: 16rpx;
+              margin-bottom: 10rpx;
             }
 
             .raise-funds-project-desc {
               font-weight: 400;
               color: #999999;
-              font-size: 22px;
+              font-size: 22rpx;
               line-height: 1.3;
             }
           }
 
           ::v-deep .van-button {
-            border-radius: 25px;
+            border-radius: 25rpx;
             position: absolute;
-            right: 14px;
-            bottom: 15px;
+            right: 14rpx;
+            bottom: 15rpx;
           }
         }
 
         .raise-funds-project-item:nth-child(odd) {
-          margin-right: 10px;
+          margin-right: 10rpx;
         }
       }
     }
   }
 
   ::v-deep .van-icon {
-    font-size: 24px;
+    font-size: 24rpx;
     color: #999999;
   }
 }
 
 .placeholder-bar {
-  height: 805px;
+  height: 805rpx;
   width: 100%;
 
   .header-bg {
     width: 100%;
-    height: 805px;
+    height: 805rpx;
   }
 
   .header-title {
     position: absolute;
-    top: 80px;
+    top: 80rpx;
     width: 100%;
     text-align: center;
-    font-size: 36px;
+    font-size: 36rpx;
     font-weight: 400;
     color: #ffffff;
   }
+}
+.btnC {
+  background-image: linear-gradient(
+    270deg,
+    rgba(250, 156, 78, 1) 0,
+    rgba(243, 99, 38, 1) 100%
+  );
+  border-radius: 33px;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 1) !important;
+  border-radius: 33rpx;
+  width: 175rpx;
+  height: 60rpx;
 }
 </style>
