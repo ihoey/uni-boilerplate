@@ -1,8 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './uni.promisify.adaptor'
+import Vue from "vue";
 
-Vue.config.productionTip = false
+import store from "./store";
 
-const app = new (typeof App === 'function' ? App : Vue.extend(Object.assign({ mpType: 'app' }, App)))
+import App from "./App.vue";
+import "./uni.promisify.adaptor";
+
+Vue.config.productionTip = false;
+
+store.dispatch("getSystemInfo");
+
+const app = new (
+  typeof App === "function" ? App : Vue.extend(Object.assign({ mpType: "app" }, App, store))
+)();
 app.$mount();

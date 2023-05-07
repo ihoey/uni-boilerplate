@@ -1,0 +1,95 @@
+.page {
+  background-color: rgba(249, 249, 249, 1);
+  position: relative;
+  width: 750rpx;
+  height: 1624rpx;
+  overflow: hidden;
+
+  .box_2 {
+    padding: 20rpx 30rpx 463rpx 30rpx;
+
+    .box_3 {
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 10px;
+      padding: 29rpx 20rpx 31rpx 20rpx;
+
+      .text-wrapper_1 {
+        width: 365rpx;
+        margin: 0 281rpx 0 4rpx;
+
+        .text_2 {
+          overflow-wrap: break-word;
+          color: rgba(51, 51, 51, 1);
+          font-size: 30rpx;
+          font-weight: NaN;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 42rpx;
+        }
+
+        .text_3 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 30rpx;
+          font-weight: NaN;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 42rpx;
+          margin-top: 1rpx;
+        }
+      }
+
+      .group_1 {
+        background-color: rgba(233, 233, 233, 1);
+        width: 650rpx;
+        height: 1rpx;
+        margin-top: 28rpx;
+        padding: 0;
+      }
+
+      .text-wrapper_2 {
+        width: 646rpx;
+        margin: 28rpx 0 0 4rpx;
+
+        .text_4 {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 30rpx;
+          font-weight: NaN;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 42rpx;
+        }
+
+        .text_5 {
+          overflow-wrap: break-word;
+          color: rgba(249, 101, 30, 1);
+          font-size: 30rpx;
+          font-weight: NaN;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 42rpx;
+        }
+      }
+    }
+
+    .button_1 {
+      background-color: rgba(249, 101, 30, 1);
+      border-radius: 48px;
+      margin: 715rpx 24rpx 0 25rpx;
+      padding: 25rpx 286rpx 24rpx 286rpx;
+
+      .text_6 {
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 32rpx;
+        letter-spacing: 1.1428571939468384px;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        text-align: right;
+        white-space: nowrap;
+        line-height: 45rpx;
+      }
+    }
+  }
+}
