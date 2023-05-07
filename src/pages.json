@@ -8,18 +8,19 @@
   },
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
     {
-      "path": "pages/addjuankuan/index",
+      "path": "pages/zhanghumain/index",
       "style": {
-        "navigationBarTitleText": "发起捐款",
+        "navigationBarTitleText": "账户明细",
         "enablePullDownRefresh": false,
         "navigationStyle": "custom"
       }
     },
     {
-      "path": "pages/zhanghumain/index",
+      "path": "pages/addjuankuan/index",
       "style": {
-        "navigationBarTitleText": "账户明细",
+        "navigationBarTitleText": "发起捐款",
         "enablePullDownRefresh": false,
         "navigationStyle": "custom"
       }

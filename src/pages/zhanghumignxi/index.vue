@@ -13,15 +13,21 @@
         </div>
         <div class="group_14 flex-row" @click="clickDate">
           <span class="text_26">开始时间</span>
-          <span class="text_27">{{ startDate? startDate:'请选择' }}</span>
+          <span class="text_27">
+            <picker mode="date" :value="date1" :start="startDate" :end="endDate" @change="(e)=>bindDateChange('start',e)">
+              <view class="uni-input">{{date1}}</view>
+            </picker>
+          </span>
+          <uni-icons class="arrorR" type="right" color="#999" size="15"></uni-icons>
         </div>
         <div class="group_14 flex-row" @click="clickDate1">
           <span class="text_26">结束时间</span>
-          <span class="text_27">{{ endDate? endDate:'请选择' }}</span>
-          <!-- <img
-            class="icon_1"
-            referrerpolicy="no-referrer"
-            src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1de797e9b62b33d8d951d5a8c60062bb715d953b2377e931769c834d84ff9417" /> -->
+          <span class="text_27">
+            <picker mode="date" :value="date2" :start="startDate" :end="endDate" @change="()=>bindDateChange('end',e)">
+              <view class="uni-input">{{date2}}</view>
+            </picker>
+          </span>
+          <uni-icons class="arrorR" type="right" color="#999" size="15"></uni-icons>
         </div>
         <span class="text_30">提现类型</span>
         <div class="group_16 flex-row justify-between">
@@ -54,28 +60,60 @@ export default {
 
   //  :formatter="formatter"
   data() {
+    const currentDate = this.getDate({
+      format: true,
+    });
     return {
       typeC: 1,
       show: false,
       showcalendar: false,
       currentDate: new Date().getTime(),
       minDate: new Date().getTime(),
-      startDate: "",
-      endDate: "",
+      startDate1: "",
+      // endDate: "",
       deteType: "",
-      // formatter: (type, value) => {
-      //   if (type === "year") {
-      //     return `${value}年`;
-      //   }
-      //   if (type === "month") {
-      //     return `${value}月`;
-      //   }
-      //   return value;
-      // },
+      date1: currentDate,
+      date2: currentDate,
     };
   },
-  computed: {},
+  computed: {
+    startDate() {
+      return this.getDate("start");
+    },
+    endDate() {
+      return this.getDate("end");
+    },
+  },
   methods: {
+    bindPickerChange: function (e) {
+      console.log("picker发送选择改变，携带值为", e.detail.value);
+      this.index = e.detail.value;
+    },
+    bindDateChange: function (type, e) {
+      if (type === "start") {
+        this.date1 = e.detail.value;
+      } else {
+        this.date2 = e.detail.value;
+      }
+    },
+    bindTimeChange: function (e) {
+      this.time = e.detail.value;
+    },
+    getDate(type) {
+      const date = new Date();
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDate();
+
+      if (type === "start") {
+        year = year - 60;
+      } else if (type === "end") {
+        year = year + 2;
+      }
+      month = month > 9 ? month : "0" + month;
+      day = day > 9 ? day : "0" + day;
+      return `${year}-${month}-${day}`;
+    },
     chooseBtn(num) {
       this.typeC = num;
     },
@@ -89,19 +127,7 @@ export default {
     onClosecalendar() {
       this.showcalendar = false;
     },
-    formatDate(date) {
-      date = new Date(date);
-      console.log("date :>> ", date);
-      return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-    },
-    onConfirm(event) {
-      this.showcalendar = false;
-      if (this.deteType && this.deteType == "start") {
-        this.startDate = this.formatDate(event.detail);
-      } else if (this.deteType && this.deteType == "end") {
-        this.endDate = this.formatDate(event.detail);
-      }
-    },
+
     clickDate() {
       this.showcalendar = true;
       this.deteType = "start";
@@ -119,6 +145,7 @@ export default {
       this.currentDate = event.detail;
     },
   },
+  mounted() {},
 };
 </script>
 
@@ -131,6 +158,11 @@ export default {
 .van-popup {
   border-radius: 12rpx !important;
   height: 60%;
+}
+.arrorR {
+  position: absolute;
+  top: -20rpx;
+  right: 0;
 }
 .text_33 {
   overflow-wrap: break-word;
@@ -195,6 +227,7 @@ export default {
 
 .group_14 {
   margin: 60rpx 14rpx 0 0;
+  position: relative;
 }
 
 .text_23 {
