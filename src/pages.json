@@ -20,9 +20,9 @@
     {
       "path": "pages/xingdong/index",
       "style": {
-        "navigationBarTitleText": "想动",
+        "navigationBarTitleText": "志愿者行动",
         "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
+        "navigationStyle": "default"
       }
     },
     {

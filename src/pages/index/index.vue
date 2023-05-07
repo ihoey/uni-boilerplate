@@ -31,9 +31,9 @@
               <div class="list-item-desc">
                 为孤寡老人、失能失智老人提供基础医疗服务行动
               </div>
-              <!-- <van-button color="linear-gradient(to right, #FA9C4E, #F36326 ) font-size:" size="small">
+              <!-- <button color="linear-gradient(to right, #FA9C4E, #F36326 ) font-size:" size="small">
 
-              </van-button> -->
+              </button> -->
               <button type="default" class="btnC">立即帮助</button>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default {
             }
           }
 
-          ::v-deep .van-button {
+          ::v-deep .button {
             border-radius: 25rpx;
             position: absolute;
             right: 14rpx;
