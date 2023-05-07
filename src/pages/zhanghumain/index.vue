@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <zhanghumignxi :showMode="showMode"></zhanghumignxi>
+    <zhanghumignxi ref="hhhhh" :showMode="showMode"></zhanghumignxi>
   </div>
 </template>
 <script>
@@ -67,15 +67,10 @@ export default {
       });
     },
     dialogShow() {
-      this.showMode = true;
+      this.$refs.hhhhh.$refs.popppp.open();
     },
   },
-  mounted() {
-    console.log("this.$popppp :>> ");
-    this.$nextTick(() => {
-      console.log("this.$popppp :>> ", this.$refs);
-    });
-  },
+  mounted() {},
 };
 </script>
 <style lang="scss">
