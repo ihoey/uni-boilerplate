@@ -10,6 +10,7 @@ Vue.config.productionTip = false;
 store.dispatch("getSystemInfo");
 
 const app = new (
-  typeof App === "function" ? App : Vue.extend(Object.assign({ mpType: "app" }, App, store))
-)();
+  typeof App === "function" ? App : Vue.extend(Object.assign({ mpType: "app" }, App))
+)({ store });
+
 app.$mount();

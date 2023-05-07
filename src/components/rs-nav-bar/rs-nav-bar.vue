@@ -151,7 +151,7 @@ export default {
   }
   .title {
     // color: #ffffff;
-    // font-size: 32rpx;
+    font-size: 32rpx;
     line-height: 88rpx;
     // font-weight: 600;
     text-align: center;
