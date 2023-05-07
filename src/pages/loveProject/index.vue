@@ -21,15 +21,17 @@
           <div class="list-item-title">孤寡老人的医疗救治计划</div>
           <div class="list-item-desc">
             为孤寡老人、失能失智老人提供基础医疗服务行动
-            <div class="mark-content">
+            <div class="mark-content d-flex justify-content-around">
               <div class="mark danger">孤寡老人</div>
               <div class="mark warning">失能失智</div>
               <!--              <div class="mark primary">贫困地区</div>-->
+
+              <button class="button" size="small">
+                立即帮助
+              </button>
             </div>
           </div>
-          <van-button color="linear-gradient(to right, #FA9C4E, #F36326 )" size="small">
-            立即帮助
-          </van-button>
+
         </div>
       </div>
     </div>
@@ -84,7 +86,7 @@ export default {
   .header-bj-title {
     .project-bj {
       width: 100%;
-      height: 967px;
+      height: 967rpx;
       position: absolute;
       top: 0;
       z-index: -1;
@@ -93,48 +95,48 @@ export default {
     .project-title {
       font-weight: 400;
       color: #ffffff;
-      font-size: 36px;
+      font-size: 36rpx;
       width: 100%;
       text-align: center;
-      padding-top: 80px;
+      padding-top: 80rpx;
     }
   }
 
   ::v-deep .van-search {
-    margin: 28px 16px 52px 21px;
-    height: 70px;
+    margin: 28px 16px 52px 21rpx;
+    height: 70rpx;
     background: #f9f9f9;
-    border-radius: 12px;
+    border-radius: 12rpx;
   }
 
   .project-list-content {
     background: #ffffff;
-    border-radius: 30px 30px 0px 0px;
-    padding-bottom: 180px;
+    border-radius: 30px 30px 0px 0rpx;
+    padding-bottom: 180rpx;
 
     .project-list-title {
       font-weight: 500;
       color: #333333;
-      font-size: 32px;
-      padding-top: 35px;
-      padding-left: 18px;
-      margin-bottom: 30px;
+      font-size: 32rpx;
+      padding-top: 35rpx;
+      padding-left: 18rpx;
+      margin-bottom: 30rpx;
     }
 
     .btn-gather {
       display: flex;
       justify-content: space-between;
-      padding: 0 20px;
-      margin-bottom: 40px;
+      padding: 0 20rpx;
+      margin-bottom: 40rpx;
 
       .btn {
         text-align: center;
-        width: 161px;
-        height: 58px;
-        line-height: 60px;
+        width: 161rpx;
+        height: 58rpx;
+        line-height: 60rpx;
         background: #efefef;
-        border-radius: 6px;
-        font-size: 30px;
+        border-radius: 6rpx;
+        font-size: 30rpx;
         font-weight: 400;
         color: #999999;
         border: 1px solid #efefef;
@@ -149,8 +151,8 @@ export default {
             content: "";
             display: block;
             background-image: url("http://localhost/public/images/progect_btn_active.png");
-            width: 40px;
-            height: 27px;
+            width: 40rpx;
+            height: 27rpx;
             position: absolute;
             background-size: 100% 100%;
             top: 0;
@@ -161,61 +163,60 @@ export default {
     }
 
     .project-list-item {
-      width: calc(100% - 40px);
+      width: calc(100% - 40rpx);
       background: #ffffff;
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 12rpx;
+      padding: 20rpx;
       text-align: left;
       position: relative;
-      padding-bottom: 51px;
+      padding-bottom: 51rpx;
       position: relative;
 
       &:after {
         position: absolute;
         content: "";
-        width: calc(100% - 40px);
-        height: 1px;
+        width: calc(100% - 40rpx);
+        height: 1rpx;
         background: #e8e8e8;
-        bottom: 21px;
+        bottom: 21rpx;
       }
 
       .list-item-img {
-        width: 244px;
-        height: 198px;
-        margin-right: 20px;
+        width: 244rpx;
+        height: 198rpx;
+        margin-right: 20rpx;
       }
 
       .list-item-title {
-        font-size: 28px;
+        font-size: 28rpx;
         font-weight: 500;
         color: #333333;
-        margin-top: 8px;
-        margin-bottom: 15px;
+        margin-top: 8rpx;
+        margin-bottom: 15rpx;
         display: flex;
         justify-content: space-between;
       }
 
       .list-item-desc {
+        font-size: 24rpx;
         font-weight: 400;
         color: #999999;
-        line-height: 1.4;
+        line-height: 33rpx;
 
         .mark-content {
-          margin-top: 24px;
+          margin-top: 24rpx;
           display: flex;
-          flex-flow: wrap;
-          width: 268px;
-          margin-bottom: 9px;
+          align-items: center;
 
           .mark {
             text-align: center;
-            margin-left: 5px;
-            width: 115px;
-            height: 41px;
-            line-height: 41px;
-            font-size: 22px;
+            margin-left: 5rpx;
+            width: 115rpx;
+            height: 41rpx;
+            line-height: 41rpx;
+            font-size: 22rpx;
             font-weight: 400;
-            border-radius: 21px;
+            border-radius: 21rpx;
 
             &.danger {
               color: #f2a796;
@@ -235,13 +236,17 @@ export default {
         }
       }
 
-      ::v-deep .van-button {
-        position: absolute;
-        bottom: 41px;
-        right: 20px;
-        border-radius: 33px;
-        width: 175px;
-        height: 60px;
+      .button {
+        border-radius: 33rpx;
+        width: 175rpx;
+        height: 60rpx;
+        background: linear-gradient(to right, #fa9c4e, #f36326);
+
+        font-size: 28rpx;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #ffffff;
+        line-height: 60rpx;
       }
     }
 

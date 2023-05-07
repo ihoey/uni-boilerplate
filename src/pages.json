@@ -45,16 +45,17 @@
     {
       "path": "pages/xingdong/index",
       "style": {
-        "navigationBarTitleText": "想动",
+        "navigationBarTitleText": "志愿者行动",
         "enablePullDownRefresh": false,
-        "navigationStyle": "custom"
+        "navigationStyle": "default"
       }
     },
     {
       "path": "pages/huigu/index",
       "style": {
-        "navigationBarTitleText": "回顾",
+        "navigationBarTitleText": "捐款回顾",
         "enablePullDownRefresh": false,
+        // "navigationBarBackgroundColor": "#e76b35",
         "navigationStyle": "custom"
       }
     },

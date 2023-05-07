@@ -26,10 +26,10 @@
           <div>发起受捐</div>
           <div>本人发起捐款</div>
         </div>
-        <img src="/static/images/my/left.png" alt="" />
+        <img class="image" src="/static/images/my/left.png" alt="" />
       </div>
       <div class="right-counter">
-        <img src="/static/images/my/right.png" alt="" />
+        <img class="image" src="/static/images/my/right.png" alt="" />
       </div>
     </div>
     <div class="function-counter">
@@ -156,15 +156,15 @@ export default {
   }
 
   .contribution {
-    width: calc(710px - 28px);
+    width: calc(710rpx - 28rpx);
     display: flex;
-    height: calc(218px - 30px - 28px);
+    height: calc(218rpx - 30rpx - 28rpx);
     margin-left: 20rpx;
-    padding: 30px 14px 28px 14rpx;
+    padding: 30rpx 14rpx 28rpx 14rpx;
     background: #ffffff;
     border-radius: 20rpx;
 
-    image {
+    .image {
       width: 337rpx;
       height: 160rpx;
     }
@@ -172,6 +172,7 @@ export default {
     .left-counter {
       margin-right: 8rpx;
       position: relative;
+      width: 50%;
 
       & > div {
         position: absolute;
@@ -204,7 +205,7 @@ export default {
       justify-content: start;
       align-items: center;
       position: relative;
-      padding: 30px 41px 30px 30rpx;
+      padding: 30rpx 41rpx 30rpx 30rpx;
 
       .title {
         font-weight: 400;
