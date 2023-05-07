@@ -1,0 +1,257 @@
+.page {
+  background-color: rgba(249, 249, 249, 1);
+  position: relative;
+  width: 750rpx;
+  height: 1624rpx;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 1043rpx;
+  padding-left: 0;
+  padding-right: 0;
+
+  .header-bg {
+    background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng87dc4dfee6e9449c212cd9bbf3ca8d1b8552f46a5d23e5501b2b31a484631996)
+      100% no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .group_1 {
+    // background: linear-gradient(270deg, #FF6A26 0%, #FE7E16 100%);
+    padding: 29rpx 1rpx 0rpx 0;
+
+    .group_3 {
+      border-radius: 12rpx;
+      background: linear-gradient(270deg, #ff6a26 0%, #fe7e16 100%);
+      margin: 34rpx 19rpx 0 20rpx;
+      padding: 46rpx 66rpx 53rpx 70rpx;
+
+      .text-wrapper_5 {
+        .text_3 {
+          overflow-wrap: break-word;
+          color: rgba(255, 255, 255, 1);
+          font-size: 50rpx;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 58rpx;
+          align-self: center;
+        }
+
+        .text_4 {
+          overflow-wrap: break-word;
+          color: rgba(255, 255, 255, 1);
+          font-size: 28rpx;
+          font-weight: NaN;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 40rpx;
+          margin-top: 28rpx;
+        }
+      }
+
+      .line-1 {
+        width: 1rpx;
+        height: 87rpx;
+        border: 1rpx solid #ffffff;
+        margin: 27rpx 0 12rpx 70rpx;
+      }
+
+      .text-wrapper_6 {
+        margin-left: 92rpx;
+
+        .text_5 {
+          overflow-wrap: break-word;
+          color: rgba(255, 255, 255, 1);
+          font-size: 50rpx;
+          font-family: DINAlternate-Bold;
+          font-weight: 700;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 58rpx;
+          align-self: center;
+        }
+
+        .text_6 {
+          overflow-wrap: break-word;
+          color: rgba(255, 255, 255, 1);
+          font-size: 28rpx;
+          font-weight: NaN;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 40rpx;
+          margin-top: 28rpx;
+        }
+      }
+    }
+
+    .text_7 {
+      overflow-wrap: break-word;
+      color: rgba(51, 51, 51, 1);
+      font-size: 32rpx;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      text-align: left;
+      white-space: nowrap;
+      line-height: 45rpx;
+      margin: 47rpx 20rpx 0 20rpx;
+    }
+  }
+
+  .box_7 {
+    width: 750rpx;
+    padding: 20rpx;
+
+    .image-text_2 {
+      width: 710rpx;
+      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng0959ae15c65aadad2592d17984cb5c569d5aefb5f2a995c4e47543447325654f)
+        100% no-repeat;
+      background-size: 100% 100%;
+      justify-content: flex-center;
+      padding: 20rpx 20rpx 20rpx 20rpx;
+
+      .image-text_18 {
+        width: 685rpx;
+
+        .group_5 {
+          border-radius: 4px;
+          background-image: url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/624dda0ffc9049e68f6f7814c75962d7_mergeImage.png);
+          width: 244rpx;
+          height: 198rpx;
+        }
+
+        .section_1 {
+          margin: 8rpx 0 8rpx 0;
+
+          .text-group_17 {
+            .text_11 {
+              overflow-wrap: break-word;
+              color: rgba(51, 51, 51, 1);
+              font-size: 28rpx;
+              font-family: PingFangSC-Medium;
+              font-weight: 500;
+              text-align: left;
+              white-space: nowrap;
+              line-height: 40rpx;
+              margin-right: 113rpx;
+            }
+
+            .text_12 {
+              width: 421rpx;
+              height: 66rpx;
+              overflow-wrap: break-word;
+              color: rgba(153, 153, 153, 1);
+              font-size: 24rpx;
+              font-weight: NaN;
+              text-align: left;
+              line-height: 33rpx;
+              margin-top: 10rpx;
+            }
+          }
+
+          .tag_1 {
+            background-color: rgba(252, 242, 244, 1);
+            border-radius: 4px;
+            position: relative;
+            margin: 26rpx 257rpx 0 0;
+            padding: 5rpx 17rpx 5rpx 8rpx;
+
+            .image-text_19 {
+              width: 139rpx;
+
+              .icon_2 {
+                width: 20rpx;
+                height: 20rpx;
+                margin: 5rpx 0 5rpx 0;
+              }
+
+              .text-group_4 {
+                overflow-wrap: break-word;
+                color: rgba(220, 79, 63, 1);
+                font-size: 22rpx;
+                font-weight: NaN;
+                text-align: left;
+                white-space: nowrap;
+                line-height: 30rpx;
+              }
+            }
+          }
+        }
+      }
+
+      .button_2 {
+        &.green {
+          background-image: linear-gradient(
+            270deg,
+            rgba(81, 230, 145, 1) 0,
+            rgba(54, 224, 136, 1) 100%
+          );
+        }
+
+        &.blue {
+          background-image: linear-gradient(
+            270deg,
+            rgba(116, 187, 255, 1) 0,
+            rgba(64, 142, 254, 1) 100%
+          );
+        }
+        .yellow {
+          background-image: linear-gradient(
+            270deg,
+            rgba(250, 156, 78, 1) 0,
+            rgba(243, 99, 38, 1) 100%
+          );
+        }
+
+        border-radius: 33px;
+        margin: 138rpx 0 0 -190rpx;
+        padding: 9rpx 30rpx 9rpx 31rpx;
+
+        .text_13 {
+          overflow-wrap: break-word;
+          color: rgba(255, 255, 255, 1);
+          font-size: 28rpx;
+          font-family: PingFangSC-Medium;
+          font-weight: 500;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 40rpx;
+        }
+      }
+
+      .image_4 {
+        width: 14rpx;
+        height: 24rpx;
+        margin: 16rpx 0 158rpx -14rpx;
+      }
+    }
+  }
+
+  .group_10 {
+    box-shadow: 0px 0px 4px 0px rgba(219, 219, 219, 0.5);
+    background-color: rgba(255, 255, 255, 1);
+    height: 160rpx;
+    width: 750rpx;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 24rpx 30rpx 56rpx 30rpx;
+
+    .button_4 {
+      background-image: linear-gradient(270deg, rgba(250, 156, 78, 1) 0, rgba(243, 99, 38, 1) 100%);
+      border-radius: 38px;
+      padding: 17rpx 248rpx 16rpx 248rpx;
+
+      .text_20 {
+        overflow-wrap: break-word;
+        color: rgba(255, 255, 255, 1);
+        font-size: 32rpx;
+        font-family: PingFangSC-Medium;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 45rpx;
+      }
+    }
+  }
+}
