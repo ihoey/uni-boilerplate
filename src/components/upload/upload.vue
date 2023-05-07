@@ -1,5 +1,5 @@
 <template>
-  <uni-section>
+  <uni-section title="">
     <view class="example-body">
       <uni-file-picker :limit="limit" :imageStyles="imageStyles">
         <div class="upload flex-col align-center justify-center">
@@ -23,7 +23,6 @@ export default {
       default: "请上传",
     },
     limit: {
-      type: Number,
       default: 1,
     },
   },

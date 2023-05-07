@@ -54,7 +54,7 @@
 <script>
 import rsInput from "@/components/rs-input/rs-input";
 
-import fUpload from "./upload";
+import fUpload from "../upload/upload";
 
 export default {
   components: {

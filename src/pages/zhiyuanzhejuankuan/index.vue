@@ -25,10 +25,10 @@
 
 <script>
 import rsNavBar from "@/components/rs-nav-bar/rs-nav-bar";
-import fBasic from "@/components/juankuan/basic";
-import fTitle from "@/components/juankuan/title";
-import fPackage from "@/components/juankuan/package";
-import fSlogan from "@/components/juankuan/slogan";
+import fBasic from "./components/basic";
+import fTitle from "./components/title";
+import fPackage from "./components/package";
+import fSlogan from "./components/slogan.vue";
 
 export default {
   components: {

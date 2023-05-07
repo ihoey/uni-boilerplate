@@ -26,8 +26,13 @@
     </div> -->
   </div>
 </template>
+
 <script>
+import rsInput from "@/components/rs-input/rs-input";
 export default {
+  components: {
+    rsInput,
+  },
   name: "f-package",
   data() {
     return {

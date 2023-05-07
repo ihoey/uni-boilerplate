@@ -10,12 +10,6 @@
     margin: 29rpx 356rpx 0 49rpx;
 
     .checkbox_1 {
-      // background-color: rgba(255, 255, 255, 1);
-      // border-radius: 50%;
-      // width: 24rpx;
-      // height: 24rpx;
-      // border: 1px solid rgba(153, 153, 153, 1);
-      // margin: 4rpx 0 5rpx 0;
       ::v-deep .uni-checkbox-input {
         border-radius: 50%;
       }
