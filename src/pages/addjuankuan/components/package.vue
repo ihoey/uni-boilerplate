@@ -10,13 +10,20 @@
           src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng44ac6d6e6afa18c6c29fb960ce8f8601230573a70bfa84dbc9617d7125de3ea3" />
       </div>
     </div>
-    <span class="text_10">请填写所需爱心包数量</span>
+    <!-- <span class="text_10"></span> -->
+    <!-- {{ valueNum }} -->
+    <rs-input v-modal="valueNum" @input="input" class="text_10" placeholder="请填写所需爱心包数量"></rs-input>
     <div class="block_2 flex-col"></div>
     <span class="text_11">捐赠时间</span>
-    <div class="text-wrapper_2 flex-row justify-between">
+    <!-- <uni-section :title="'日期范围用法：' + '[' + range + ']'" type="line"></uni-section> -->
+    <view class="example-body">
+      <!-- {{ range }} -->
+      <uni-datetime-picker :border=" false" v-model="range" type="daterange" />
+    </view>
+    <!-- <div class="text-wrapper_2 flex-row justify-between">
       <span class="text_12">开始时间</span> <span class="text_13">至</span>
       <span class="text_14">结束时间</span>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -25,11 +32,20 @@ export default {
   data() {
     return {
       visible: true,
+      valueNum: "",
+      range: "",
     };
   },
   methods: {
     changeVisible() {
       this.visible = !this.visible;
+    },
+    input(e) {
+      console.log("e :>> ", e);
+      this.valueNum = e;
+    },
+    maskClick(e) {
+      console.log("maskClick事件:", e);
     },
   },
 };
@@ -96,7 +112,7 @@ export default {
     text-align: justify;
     white-space: nowrap;
     line-height: 40rpx;
-    margin: 38rpx 372rpx 0 0;
+    margin: 38rpx 0 -10rpx 0;
   }
 
   .block_2 {
@@ -115,7 +131,7 @@ export default {
     text-align: left;
     white-space: nowrap;
     line-height: 45rpx;
-    margin: 20rpx 524rpx 0 0;
+    margin: 20rpx 0 20rpx 0;
   }
 
   .text-wrapper_2 {
@@ -159,6 +175,9 @@ export default {
       white-space: nowrap;
       line-height: 42rpx;
     }
+  }
+  .example-body {
+    background: #f9f9f9;
   }
 }
 </style>
