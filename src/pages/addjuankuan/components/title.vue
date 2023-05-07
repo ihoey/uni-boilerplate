@@ -18,29 +18,17 @@
       <span class="text_7">老人生活图片</span>
       <span class="text_23">可上传多张</span>
     </div>
-
-    <uni-section class="text_8">
-      <view class="example-body">
-        <uni-file-picker limit="9" :imageStyles="imageStyles">
-          <div class="group_4 flex-col align-center justify-center">
-            <img
-              class="image_2"
-              referrerpolicy="no-referrer"
-              src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng1c6536c181849e464360c10ec6adb9bf6fe61df5436be6f19b11a3a4be7e4283" />
-            <span class="text_8">请上传老人生活图片</span>
-          </div>
-        </uni-file-picker>
-      </view>
-    </uni-section>
-
+    <f-upload placeholder="请上传老人生活图片"></f-upload>
   </div>
 </template>
 <script>
 import rsInput from "@/components/rs-input/rs-input";
+import fUpload from "./upload";
 
 export default {
   components: {
     rsInput,
+    fUpload,
   },
   name: "f-title",
   data() {
@@ -64,7 +52,6 @@ export default {
   padding: 0 0;
   .rs-input--input {
     padding: 0 26rpx;
-    // background-color: rgb(249, 249, 249);
     border-radius: 10rpx;
   }
 }
@@ -176,32 +163,6 @@ export default {
       white-space: nowrap;
       line-height: 40rpx;
       margin: 10rpx 72rpx 0 0;
-    }
-  }
-
-  .group_4 {
-    background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5ed2b867a8dbb7e662eceed8c94123d603f57fa0de95401843414c3003f7f6e4)
-      100% no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-
-    .image_2 {
-      width: 66rpx;
-      height: 66rpx;
-      align-self: center;
-    }
-
-    .text_8 {
-      overflow-wrap: break-word;
-      color: rgba(249, 101, 30, 1);
-      font-size: 24rpx;
-      font-family: PingFangSC-Medium;
-      font-weight: 500;
-      text-align: left;
-      white-space: nowrap;
-      line-height: 33rpx;
-      margin-top: 24rpx;
     }
   }
 }

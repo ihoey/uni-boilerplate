@@ -8,7 +8,9 @@
         src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng44ac6d6e6afa18c6c29fb960ce8f8601230573a70bfa84dbc9617d7125de3ea3" />
     </div>
     <div class="text-wrapper_3 flex-col">
-      <span class="text_16">将用于感谢捐款人</span>
+      <!-- <span class="text_16">将用于感谢捐款人</span> -->
+      <textarea class="text_16" name="" id="" cols="30" rows="5" placeholder="将用于感谢捐款人"></textarea>
+
     </div>
   </div>
 </template>
@@ -69,7 +71,7 @@ export default {
     background-color: rgba(249, 249, 249, 1);
     border-radius: 12px;
     margin-top: 38rpx;
-    padding: 25rpx 398rpx 136rpx 28rpx;
+    padding: 26rpx;
 
     .text_16 {
       overflow-wrap: break-word;

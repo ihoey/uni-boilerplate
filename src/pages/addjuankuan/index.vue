@@ -6,8 +6,8 @@
     <f-package></f-package>
     <f-slogan></f-slogan>
 
-    <div class="image-text_16 flex-row justify-between">
-      <div class="checkbox_1 flex-col"></div>
+    <div class="image-text_16 flex-row justify-between align-center">
+      <checkbox class="checkbox_1 flex-col" style="transform:scale(0.7)" value="cb" checked="true" />
       <span class="text_17">请阅读并确认《捐赠者协议》</span>
     </div>
 

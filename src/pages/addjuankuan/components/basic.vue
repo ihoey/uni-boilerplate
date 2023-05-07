@@ -9,7 +9,7 @@
     </div>
     <span v-show="visible" class="text_21">上传证件进行身份识别，请保证照片完整、清晰、无反光；我们将依法保障您的信息安全。</span>
     <div class="group_13 flex-row justify-between">
-      <div class="align-center flex-row justify-center section_8">
+      <!-- <div class="align-center flex-row justify-center section_8">
         <div class="image-text_17 flex-col">
           <img
             class="image_3"
@@ -18,8 +18,9 @@
           <span class="text-group_1">上传人像面</span>
         </div>
         <uni-file-picker class="picker" limit="1" :auto-upload="false"></uni-file-picker>
-      </div>
-      <div class="align-center flex-row justify-center section_8">
+      </div> -->
+
+      <!-- <div class="align-center flex-row justify-center section_8">
         <div class="image-text_17 flex-col">
           <img
             class="image_3"
@@ -29,8 +30,8 @@
         </div>
         <uni-file-picker class="picker" limit="1" :auto-upload="false"></uni-file-picker>
 
-      </div>
-      <div class="align-center flex-row justify-center section_8">
+      </div> -->
+      <!-- <div class="align-center flex-row justify-center section_8">
         <div class="image-text_17 flex-col">
           <img
             class="image_3"
@@ -39,7 +40,11 @@
           <span class="text-group_1">上传银行卡正面</span>
         </div>
         <uni-file-picker class="picker" limit="1" :auto-upload="false"></uni-file-picker>
-      </div>
+      </div> -->
+      <f-upload class="zm" placeholder="上传人像面" limit="1"></f-upload>
+      <f-upload class="fm" placeholder=" 上传国徽面" limit="1"></f-upload>
+      <f-upload class="yhk" placeholder="上传银行卡正面" limit="1"></f-upload>
+
     </div>
     <span class="text_25">银行卡开户行</span>
     <rs-input class="text_26" placeholder="请输入银行卡开户行"></rs-input>
@@ -49,8 +54,11 @@
 <script>
 import rsInput from "@/components/rs-input/rs-input";
 
+import fUpload from "./upload";
+
 export default {
   components: {
+    fUpload,
     rsInput,
   },
   name: "f-basic",
@@ -124,62 +132,22 @@ export default {
     width: 650rpx;
     flex-wrap: wrap;
 
-    .section_8 {
-      margin-top: 40rpx;
+    .zm::v-deep .upload {
       background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng316d2332d57a20754dc0c2e7c611f92362d53edf4ed7df65ce27614df6dc0a69)
         100% no-repeat;
       background-size: 100% 100%;
-      width: 160px;
-      height: 102px;
-      position: relative;
+    }
 
-      &:nth-child(2) {
-        background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng60663263e8d60205a5c931d2c4d22c87fd9e686482d566200cc7394e0762d2f1)
-          100% no-repeat;
-        background-size: 100% 100%;
-      }
+    .fm::v-deep .upload {
+      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng60663263e8d60205a5c931d2c4d22c87fd9e686482d566200cc7394e0762d2f1)
+        100% no-repeat;
+      background-size: 100% 100%;
+    }
 
-      &:nth-child(3) {
-        background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngefc7215121e19eec0433712112b02cbcbffcb1d4843ffa862ae42140ce617f53)
-          100% no-repeat;
-        background-size: 100% 100%;
-      }
-
-      .picker {
-        position: absolute;
-        width: 160px;
-        height: 102px;
-        ::v-deep .uni-file-picker__container {
-          margin: 0;
-          .file-picker__box {
-            width: 160px !important;
-            height: 102px !important;
-            .is-add {
-              opacity: 0;
-            }
-          }
-        }
-      }
-
-      .image-text_17 {
-        .image_3 {
-          width: 66rpx;
-          height: 66rpx;
-          align-self: center;
-        }
-
-        .text-group_1 {
-          overflow-wrap: break-word;
-          color: rgba(249, 101, 30, 1);
-          font-size: 24rpx;
-          font-family: PingFangSC-Medium;
-          font-weight: 500;
-          text-align: left;
-          white-space: nowrap;
-          line-height: 33rpx;
-          margin-top: 13rpx;
-        }
-      }
+    .yhk::v-deep .upload {
+      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngefc7215121e19eec0433712112b02cbcbffcb1d4843ffa862ae42140ce617f53)
+        100% no-repeat;
+      background-size: 100% 100%;
     }
   }
 
