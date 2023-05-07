@@ -41,56 +41,56 @@ export default {
   components: {
     rsNavBar,
   },
-data() {
+  data() {
     return {
       loopData0: [
         {
           lanhuBg1:
-            'url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/8375d8220d2a4a0f90efdc48168f6d6d_mergeImage.png)',
-          lanhutext0: '孤寡老人的医疗救治计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供基础医疗服务行动',
-          lanhutext2: '捐赠记录',
+            "url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/8375d8220d2a4a0f90efdc48168f6d6d_mergeImage.png)",
+          lanhutext0: "孤寡老人的医疗救治计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供基础医疗服务行动",
+          lanhutext2: "捐赠记录",
         },
         {
           lanhuBg1:
-            'url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/8375d8220d2a4a0f90efdc48168f6d6d_mergeImage.png)',
-          lanhutext0: '孤寡老人的医疗救治计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供基础医疗服务行动',
-          lanhutext2: '捐赠记录',
+            "url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/8375d8220d2a4a0f90efdc48168f6d6d_mergeImage.png)",
+          lanhutext0: "孤寡老人的医疗救治计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供基础医疗服务行动",
+          lanhutext2: "捐赠记录",
         },
         {
           lanhuBg1:
-            'url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/0659cb8550c04392b7c25e548f0fd742_mergeImage.png)',
-          lanhutext0: '孤寡老人的医疗救治计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供基础医疗服务行动',
-          lanhutext2: '捐赠记录',
+            "url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/0659cb8550c04392b7c25e548f0fd742_mergeImage.png)",
+          lanhutext0: "孤寡老人的医疗救治计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供基础医疗服务行动",
+          lanhutext2: "捐赠记录",
         },
         {
           lanhuBg1:
-            'url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/0659cb8550c04392b7c25e548f0fd742_mergeImage.png)',
-          lanhutext0: '孤寡老人的医疗救治计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供基础医疗服务行动',
-          lanhutext2: '捐赠记录',
+            "url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/0659cb8550c04392b7c25e548f0fd742_mergeImage.png)",
+          lanhutext0: "孤寡老人的医疗救治计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供基础医疗服务行动",
+          lanhutext2: "捐赠记录",
         },
         {
           lanhuBg1:
-            'url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/0659cb8550c04392b7c25e548f0fd742_mergeImage.png)',
-          lanhutext0: '孤寡老人的医疗救治计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供基础医疗服务行动',
-          lanhutext2: '捐赠记录',
+            "url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/0659cb8550c04392b7c25e548f0fd742_mergeImage.png)",
+          lanhutext0: "孤寡老人的医疗救治计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供基础医疗服务行动",
+          lanhutext2: "捐赠记录",
         },
         {
           lanhuBg1:
-            'url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/46981088dac443f8ad5fae538f2f8ed3_mergeImage.png)',
-          lanhutext0: '孤寡老人的医疗救治计划',
-          lanhutext1: '为孤寡老人、失能失智老人提供基础医疗服务行动',
-          lanhutext2: '捐赠记录',
+            "url(https://lanhu-dds-backend.oss-cn-beijing.aliyuncs.com/merge_image/imgs/46981088dac443f8ad5fae538f2f8ed3_mergeImage.png)",
+          lanhutext0: "孤寡老人的医疗救治计划",
+          lanhutext1: "为孤寡老人、失能失智老人提供基础医疗服务行动",
+          lanhutext2: "捐赠记录",
         },
       ],
       loopData1: [
-        { lanhutext0: '3', lanhutext1: '我捐赠了(元)' },
-        { lanhutext0: '45', lanhutext1: '我帮助了(人)' },
-        { lanhutext0: '45', lanhutext1: '我转发了(次)' },
+        { lanhutext0: "3", lanhutext1: "我捐赠了(元)" },
+        { lanhutext0: "45", lanhutext1: "我帮助了(人)" },
+        { lanhutext0: "45", lanhutext1: "我转发了(次)" },
       ],
       constants: {},
     };
@@ -99,7 +99,7 @@ data() {
     onClick_1() {
       alert(1);
     },
-        toPath(url) {
+    toPath(url) {
       wx.navigateTo({
         url,
       });
@@ -117,7 +117,6 @@ data() {
 
 
 <style lang='scss'>
-@import "../common/common.scss";
 @import "./index.rpx.scss";
 </style>
 

@@ -6,10 +6,10 @@
           <image class="icon_1" referrerpolicy="no-referrer" src="/static/images/back.png" />
           <text class="text_2">小善筹</text>
           <image class="applet-top-bar_1" referrerpolicy="no-referrer"
-                 src="/static/images/juankuan/SketchPng9b3de2a04d8c71a024ded39dac87a33d9bcb39c3d781be45f3717c0c25c5dd0e.png" />
+            src="/static/images/juankuan/SketchPng9b3de2a04d8c71a024ded39dac87a33d9bcb39c3d781be45f3717c0c25c5dd0e.png" />
         </view>
         <image class="image_2" referrerpolicy="no-referrer"
-               src="/static/images/juankuan/SketchPngb4881c9dfa53665ee74d410ce58d599cef36767ddee6ace5d3de21edae9c7041.png" />
+          src="/static/images/juankuan/SketchPngb4881c9dfa53665ee74d410ce58d599cef36767ddee6ace5d3de21edae9c7041.png" />
       </view>
       <view class="section_3 flex-col">
         <view class="group_1 flex-row justify-between">
@@ -21,7 +21,7 @@
         </view>
         <view class="grid_2 flex-row">
           <view class="text-wrapper_1 flex-col" v-for="(item, index) in loopData0" @click="selectIndex = index"
-                :key="index" :class="{ active: selectIndex === index }">
+            :key="index" :class="{ active: selectIndex === index }">
             <text class="text_4">{{ item.lanhutext0 }}</text>
           </view>
         </view>
@@ -42,7 +42,7 @@
           </text>
         </view>
         <image class="image_3" referrerpolicy="no-referrer"
-               src="/static/images/juankuan/SketchPngfeeb3b45ee6121ca8f4303e7a8505c7ab53be15960bff50482dcb6456a8240bf.png" />
+          src="/static/images/juankuan/SketchPngfeeb3b45ee6121ca8f4303e7a8505c7ab53be15960bff50482dcb6456a8240bf.png" />
       </view>
     </view>
     <view class="box_4 flex-col">
@@ -61,9 +61,9 @@
             <view class="box_5 flex-row justify-between" @click="switch_1 = !switch_1">
               <text class="text_13">我要留言</text>
               <image v-if="switch_1" class="switch_1" referrerpolicy="no-referrer"
-                     src="/static/images/juankuan/SketchPng85e6af8e4da3b1c1018727dd6ce878f2af07149910d12ec681fec2f1795ca903.png" />
+                src="/static/images/juankuan/SketchPng85e6af8e4da3b1c1018727dd6ce878f2af07149910d12ec681fec2f1795ca903.png" />
               <image v-else class="switch_1" referrerpolicy="no-referrer"
-                     src="/static/images/juankuan/SketchPng1ed010fcaf6bb6f217df4aceb876844089b1ccd1b1055dcf58df875197908901.png" />
+                src="/static/images/juankuan/SketchPng1ed010fcaf6bb6f217df4aceb876844089b1ccd1b1055dcf58df875197908901.png" />
             </view>
             <!-- <view class="box_3 flex-col"></view> -->
             <textarea v-model="mark" class="box_3 flex-col"></textarea>
@@ -78,9 +78,9 @@
           <text class="text_15">*捐赠金额需大于1000元</text>
         </view>
         <image v-if="switch_2" class="switch_2" referrerpolicy="no-referrer"
-               src="/static/images/juankuan/SketchPng1ed010fcaf6bb6f217df4aceb876844089b1ccd1b1055dcf58df875197908901.png" />
+          src="/static/images/juankuan/SketchPng1ed010fcaf6bb6f217df4aceb876844089b1ccd1b1055dcf58df875197908901.png" />
         <image v-else class="switch_2" referrerpolicy="no-referrer"
-               src="/static/images/juankuan/SketchPng85e6af8e4da3b1c1018727dd6ce878f2af07149910d12ec681fec2f1795ca903.png" />
+          src="/static/images/juankuan/SketchPng85e6af8e4da3b1c1018727dd6ce878f2af07149910d12ec681fec2f1795ca903.png" />
       </view>
       <view class="text-wrapper_7 flex-row justify-between">
         <text class="text_16">票据类型</text>
@@ -168,6 +168,5 @@ export default {
 };
 </script>
 <style lang='scss'>
-@import "../common/common.scss";
 @import "./index.rpx.scss";
 </style>

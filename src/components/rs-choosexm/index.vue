@@ -123,7 +123,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../common/common.scss";
 .group_16 {
   width: 646px;
   margin: 39px 6px 0 0;

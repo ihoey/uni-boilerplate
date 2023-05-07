@@ -74,6 +74,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../common/common.scss";
 @import "./index.rpx.scss";
 </style>

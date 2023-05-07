@@ -109,8 +109,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../pages/common/common.scss";
-
 .rs-nav-bar {
   position: relative;
   // background-color: $nav-color;
