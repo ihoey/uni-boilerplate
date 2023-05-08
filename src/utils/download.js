@@ -37,7 +37,7 @@ export default {
         });
     });
   },
-  // 下载家长端二维码
+  // 下载证书
   downloadQRCode(qrCodeUri) {
     return new Promise((resolve, reject) => {
       authorizeUtil
