@@ -1,21 +1,17 @@
 <template>
   <view class="box_2 section_7 flex-col">
     <view class="box_29 flex-row justify-between" @click="changeVisible">
-      <text class="text_3">{{title}}</text>
-      <image
-        class="icon_2"
-        referrerpolicy="no-referrer"
-        src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnga3a0a7d64d472853d20b83eba0a03b8649bdd5d41e2f9bc445bbe2f40f37beff" />
+      <text class="text_3">{{ title }}</text>
+      <image class="icon_2" referrerpolicy="no-referrer"
+             src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPnga3a0a7d64d472853d20b83eba0a03b8649bdd5d41e2f9bc445bbe2f40f37beff" />
     </view>
     <view class="image-text_25 flex-row justify-between">
       <!-- <text class="text-group_1">请选择被资助人的关系</text> -->
       <picker class="text-group_1" placeholder="请选择被资助人的关系" @change="bindPickerChange" :value="index" :range="array">
-        <view class="uni-input">{{array[index]}}</view>
+        <view class="uni-input">{{ array[index] }}</view>
       </picker>
-      <image
-        class="icon_3"
-        referrerpolicy="no-referrer"
-        src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9f3ce9f62eb66f5fecd1e62b523fd87b1a3831de1609d998d3a25ef81fcfb1d8" />
+      <image class="icon_3" referrerpolicy="no-referrer"
+             src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9f3ce9f62eb66f5fecd1e62b523fd87b1a3831de1609d998d3a25ef81fcfb1d8" />
     </view>
     <view class="box_4 flex-col"></view>
     <!-- <text class="text_4">请填写您的职业</text> -->
@@ -101,6 +97,7 @@ export default {
 ::v-deep .rs-input {
   margin-top: 0;
   padding: 0 0;
+
   .rs-input--input {
     padding: 0 0 !important;
     // background-color: rgb(249, 249, 249);
@@ -108,9 +105,11 @@ export default {
     font-size: 28rpx;
   }
 }
+
 .section_7 {
   .box_29 {
     width: 651rpx;
+
     .text_3 {
       overflow-wrap: break-word;
       color: rgba(51, 51, 51, 1);
@@ -121,15 +120,18 @@ export default {
       white-space: nowrap;
       line-height: 45rpx;
     }
+
     .icon_2 {
       width: 32rpx;
       height: 18rpx;
       margin: 14rpx 0 13rpx 0;
     }
   }
+
   .image-text_25 {
     width: 324rpx;
     margin: 38rpx 0rpx 0 0;
+
     .text-group_1 {
       overflow-wrap: break-word;
       color: rgba(153, 153, 153, 1);
@@ -139,12 +141,14 @@ export default {
       white-space: nowrap;
       line-height: 40rpx;
     }
+
     .icon_3 {
       width: 27rpx;
       height: 15rpx;
       margin: 11rpx 0 14rpx 0;
     }
   }
+
   .box_4 {
     background-color: rgba(233, 233, 233, 1);
     width: 649rpx;
@@ -152,6 +156,7 @@ export default {
     align-self: center;
     margin-top: 22rpx;
   }
+
   .text_4 {
     overflow-wrap: break-word;
     color: rgba(153, 153, 153, 1);
@@ -162,6 +167,7 @@ export default {
     line-height: 40rpx;
     margin: 40rpx 0rpx 0 0;
   }
+
   .box_5 {
     background-color: rgba(233, 233, 233, 1);
     width: 649rpx;
@@ -183,6 +189,7 @@ export default {
   &.close {
     overflow: hidden;
     height: 100rpx;
+
     .up {
       transform: rotate(-180deg);
     }
@@ -226,20 +233,17 @@ export default {
     flex-wrap: wrap;
 
     .zm::v-deep .upload {
-      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng316d2332d57a20754dc0c2e7c611f92362d53edf4ed7df65ce27614df6dc0a69)
-        100% no-repeat;
+      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng316d2332d57a20754dc0c2e7c611f92362d53edf4ed7df65ce27614df6dc0a69) 100% no-repeat;
       background-size: 100% 100%;
     }
 
     .fm::v-deep .upload {
-      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng60663263e8d60205a5c931d2c4d22c87fd9e686482d566200cc7394e0762d2f1)
-        100% no-repeat;
+      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng60663263e8d60205a5c931d2c4d22c87fd9e686482d566200cc7394e0762d2f1) 100% no-repeat;
       background-size: 100% 100%;
     }
 
     .yhk::v-deep .upload {
-      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngefc7215121e19eec0433712112b02cbcbffcb1d4843ffa862ae42140ce617f53)
-        100% no-repeat;
+      background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngefc7215121e19eec0433712112b02cbcbffcb1d4843ffa862ae42140ce617f53) 100% no-repeat;
       background-size: 100% 100%;
     }
   }
@@ -276,6 +280,7 @@ export default {
 
   ::v-deep .rs-input {
     padding: 0 0;
+
     .rs-input--input {
       padding: 0 26rpx;
       // background-color: rgb(249, 249, 249);

@@ -59,8 +59,11 @@
         background-size: 100% 100%;
         margin-bottom: 20rpx;
         background-color: #ddd;
+        overflow: hidden;
+        border-radius: 12rpx;
         .image_4 {
           width: 100%;
+          height: 100%;
         }
       }
     }

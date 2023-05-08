@@ -1,16 +1,11 @@
 .page {
   position: relative;
   width: 750rpx;
-  height: 1624rpx;
-  overflow: hidden;
-  padding-top: 128rpx;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
+
   .section_2 {
     position: relative;
-    background: url(https://img1.baidu.com/it/u=413643897,2296924942&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500) 100%
-      no-repeat;
+    // background: url("/static/images/Mask.png") 100% no-repeat;
+    background: linear-gradient(#ea6538, #ffb984);
     background-size: 100% 100%;
     padding: 50rpx 0 207rpx 30rpx;
     .section_3 {

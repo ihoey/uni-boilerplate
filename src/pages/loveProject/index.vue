@@ -11,18 +11,18 @@
       <div class="project-list-title">全部项目</div>
       <div class="btn-gather">
         <div class="btn" :class="{ 'active': item.id == btnActive }" v-for="(item, index) in btnList" :key="index"
-          @click="handleProjectListBtn(item.id)">
+             @click="handleProjectListBtn(item.id)">
           {{ item.title }}
         </div>
       </div>
-      <div class="project-list-item d-flex" v-for="item in subProjects" :key="item.id">
+      <div class="project-list-item d-flex" v-for="item in 6" :key="item.id">
         <div class="list-item-left">
           <img class="list-item-img" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="">
         </div>
         <div class="list-item-right">
-          <div class="list-item-title">{{ item.fundraisingTitle }}</div>
+          <div class="list-item-title">孤寡老人的医疗救治计划</div>
           <div class="list-item-desc">
-            {{ item.story }}
+            为孤寡老人、失能失智老人提供基础医疗服务行动
             <div class="mark-content d-flex justify-content-around">
               <div class="mark danger">孤寡老人</div>
               <div class="mark warning">失能失智</div>
@@ -104,8 +104,11 @@ export default {
 <style lang="scss">
 .counter-warp {
   ::v-deep .uni-easyinput {
+    width: 710rpx !important;
+
     margin: 20rpx 20rpx 40rpx !important;
   }
+
   .header-bj-title {
     .project-bj {
       width: 100%;
@@ -186,7 +189,7 @@ export default {
     }
 
     .project-list-item {
-      width: calc(100% - 40rpx);
+      width: 100%;
       background: #ffffff;
       border-radius: 12rpx;
       padding: 20rpx;
@@ -240,6 +243,7 @@ export default {
             font-size: 22rpx;
             font-weight: 400;
             border-radius: 21rpx;
+            margin-right: 8rpx;
 
             &.danger {
               color: #f2a796;
@@ -277,5 +281,9 @@ export default {
       display: none;
     }
   }
+}
+
+.list-item-right {
+  width: 421rpx;
 }
 </style>

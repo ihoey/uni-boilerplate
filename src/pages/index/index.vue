@@ -10,7 +10,7 @@
           <div>小善筹共帮助家庭 1000 个</div>
           <img src="/static/images/sousuo.png" class="sousuo" @click="inputDialogToggle" alt="">
         </div>
-        <swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
+        <!-- <swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
           :duration="duration">
           <swiper-item v-for="item in appletImg" :key="item.id">
             <view class="swiper-item uni-bg-red">
@@ -18,6 +18,19 @@
             </view>
           </swiper-item>
 
+        </swiper> -->
+        <swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
+                :duration="duration">
+          <swiper-item>
+            <view class=" swiper-item uni-bg-red">
+              <img class="advertisement" src="/static/images/advertisement.png" alt />
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class=" swiper-item uni-bg-red">
+              <img class="advertisement" src="/static/images/advertisement.png" alt />
+            </view>
+          </swiper-item>
         </swiper>
 
         <div class="m-t-30  d-flex justify-content-between project-list-header">
@@ -27,18 +40,19 @@
             <van-icon name="arrow" />
           </div>
         </div>
+        <!-- mainContent -->
         <div class="project-list-content">
-          <div v-for="item in mainContent" :key="item" class="project-list-item d-flex">
+          <div v-for="item in 3" :key="item" class="project-list-item d-flex">
             <div class="list-item-left">
               <img class="list-item-img" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="">
             </div>
             <div class="list-item-right">
               <div class="list-item-title">
-                {{ item.fundraisingTitle }}
+                <!-- {{ item.fundraisingTitle }} -->孤寡老人的医疗救治计划
                 <van-icon name="arrow" />
               </div>
               <div class="list-item-desc  ellipsis">
-                {{ item.story }}
+                <!-- {{ item.story }} --> 为孤寡老人、失能失智老人提供基础医疗服务行动
               </div>
 
               <button type="default" class="btnC">立即帮助</button>
@@ -50,13 +64,17 @@
             筹款项目
           </div>
           <div class="raise-funds-project-content">
-            <div class="raise-funds-project-item" v-for="item in subProjects" :key="item">
+            <div class="raise-funds-project-item" v-for="item in 3" :key="item">
               <div class="raise-funds-project-images">
-                <van-image fit="contain" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                <img class="list-item-img2" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="">
               </div>
               <div class="raise-funds-project-info">
-                <div class="raise-funds-project-title"> {{ item.fundraisingTitle }}</div>
-                <div class="raise-funds-project-desc ellipsis"> {{ item.story }}</div>
+                <div class="raise-funds-project-title"> 孤寡老人的医疗救治计划
+                  <!-- {{ item.fundraisingTitle }} -->
+                </div>
+                <div class="raise-funds-project-desc ellipsis"> 为孤寡老人、失能失智老人提供基础医疗服务行动
+                  <!-- {{ item.story }} -->
+                </div>
               </div>
 
               <button type="default" class="btnC"> 帮TA</button>
@@ -67,8 +85,8 @@
     </div>
     <!-- 输入框示例 -->
     <uni-popup ref="inputDialog" type="dialog">
-      <uni-popup-dialog ref="inputClose" mode="input" title="输入内容" value="!"
-        placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
+      <uni-popup-dialog ref="inputClose" mode="input" title="输入内容" value="!" placeholder="请输入内容"
+                        @confirm="dialogInputConfirm"></uni-popup-dialog>
     </uni-popup>
     <!-- 使用组件 -->
     <tab-bar :selectNavIndex="0"></tab-bar>
@@ -149,9 +167,11 @@ export default {
 .content {
   padding-bottom: 200rpx;
   background: #f9f9f9;
+
   ::v-deep .swiper {
     height: 325rpx;
   }
+
   .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -159,6 +179,7 @@ export default {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
+
   .content-body {
     margin-top: -629rpx;
     width: 100%;
@@ -194,7 +215,7 @@ export default {
         font-weight: 500;
       }
 
-      & > div:nth-child(2) {
+      &>div:nth-child(2) {
         color: #999999;
         font-size: 28rpx;
         font-weight: 400;
@@ -206,7 +227,7 @@ export default {
     }
 
     .project-list-item {
-      width: calc(100% - 40rpx);
+      width: 100%;
       background: #ffffff;
       border-radius: 12rpx;
       padding: 20rpx;
@@ -329,12 +350,16 @@ export default {
     color: #ffffff;
   }
 }
+
+.list-item-right,
+.list-item-desc {
+  width: 421rpx !important;
+}
+
 .btnC {
-  background-image: linear-gradient(
-    270deg,
-    rgba(250, 156, 78, 1) 0,
-    rgba(243, 99, 38, 1) 100%
-  );
+  background-image: linear-gradient(270deg,
+      rgba(250, 156, 78, 1) 0,
+      rgba(243, 99, 38, 1) 100%);
   border-radius: 33px;
   position: absolute;
   bottom: 20rpx;
@@ -345,5 +370,11 @@ export default {
   border-radius: 33rpx;
   width: 175rpx;
   height: 60rpx;
+}
+
+
+.list-item-img2 {
+  width: 322rpx;
+  height: 210rpx;
 }
 </style>
