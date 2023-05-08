@@ -1,4 +1,4 @@
-import { getCdnUrl } from "./index.js";
+// import { getCdnUrl } from "./index.js";
 import authorizeUtil from "./authorize.js";
 
 export default {
