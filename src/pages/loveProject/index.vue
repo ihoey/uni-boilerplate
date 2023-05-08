@@ -4,7 +4,9 @@
       <img src="/static/images/project_bj.png" class="project-bj" alt="">
       <div class="project-title">爱心项目</div>
     </div>
-    <van-search :value="value" placeholder="请输入搜索关键词" />
+    <!--  @iconClick="iconClick" -->
+    <uni-easyinput class="easyinput" prefixIcon="search" v-model="value" placeholder="请输入搜索关键词">
+    </uni-easyinput>
     <div class="project-list-content">
       <div class="project-list-title">全部项目</div>
       <div class="btn-gather">
@@ -67,7 +69,6 @@ export default {
   },
   methods: {
     handleProjectListBtn(id) {
-      console.log("id :>> ", this.value);
       this.btnActive = id;
     },
     increment() {
@@ -102,6 +103,9 @@ export default {
 
 <style lang="scss">
 .counter-warp {
+  ::v-deep .uni-easyinput {
+    margin: 20rpx 20rpx 40rpx !important;
+  }
   .header-bj-title {
     .project-bj {
       width: 100%;
