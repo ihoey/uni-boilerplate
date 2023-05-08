@@ -8,23 +8,16 @@
       <div class="content-body">
         <div class="content-body-header">
           <div>小善筹共帮助家庭 1000 个</div>
-          <img src="/static/images/sousuo.png" class="sousuo" alt="">
+          <img src="/static/images/sousuo.png" class="sousuo" @click="inputDialogToggle" alt="">
         </div>
         <swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
           :duration="duration">
-          <swiper-item>
+          <swiper-item v-for="item in appletImg" :key="item.id">
             <view class="swiper-item uni-bg-red">
-              <img class="advertisement" src="/static/images/advertisement.png" alt />
+              <img class="advertisement" :src="srcImg(item.filePath)" alt />
             </view>
           </swiper-item>
-          <swiper-item>
-            <view class="swiper-item uni-bg-green">
-              <img class="advertisement" src="/static/images/advertisement.png" alt />
-            </view>
-          </swiper-item>
-          <swiper-item>
-            <view class="swiper-item uni-bg-blue"> <img class="advertisement" src="/static/images/advertisement.png" alt /></view>
-          </swiper-item>
+
         </swiper>
 
         <div class="m-t-30  d-flex justify-content-between project-list-header">
@@ -35,23 +28,19 @@
           </div>
         </div>
         <div class="project-list-content">
-          <div v-for="item in 3" :key="item" class="project-list-item d-flex">
+          <div v-for="item in mainContent" :key="item" class="project-list-item d-flex">
             <div class="list-item-left">
               <img class="list-item-img" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="">
             </div>
             <div class="list-item-right">
               <div class="list-item-title">
-                孤寡老人的医疗救治计划
+                {{ item.fundraisingTitle }}
                 <van-icon name="arrow" />
               </div>
               <div class="list-item-desc  ellipsis">
-                为孤寡老人、失能失智老人提供基础医疗服务失智老人提供基础医疗服务失智老人提供基础医疗服务行动
-                为孤寡老人、失能失智老人提供基础医疗服务失智老人提供基础医疗服务失智老人提供基础医疗服务行动
-                为孤寡老人、失能失智老人提供基础医疗服务失智老人提供基础医疗服务失智老人提供基础医疗服务行动
+                {{ item.story }}
               </div>
-              <!-- <button color="linear-gradient(to right, #FA9C4E, #F36326 ) font-size:" size="small">
 
-              </button> -->
               <button type="default" class="btnC">立即帮助</button>
             </div>
           </div>
@@ -61,13 +50,13 @@
             筹款项目
           </div>
           <div class="raise-funds-project-content">
-            <div class="raise-funds-project-item" v-for="item in 4" :key="item">
+            <div class="raise-funds-project-item" v-for="item in subProjects" :key="item">
               <div class="raise-funds-project-images">
                 <van-image fit="contain" lazy-load src="https://img.yzcdn.cn/vant/cat.jpeg" />
               </div>
               <div class="raise-funds-project-info">
-                <div class="raise-funds-project-title">孤寡老人的医疗救治计划</div>
-                <div class="raise-funds-project-desc ellipsis">为孤寡老人、失能失智老人提供基础医疗服务备份</div>
+                <div class="raise-funds-project-title"> {{ item.fundraisingTitle }}</div>
+                <div class="raise-funds-project-desc ellipsis"> {{ item.story }}</div>
               </div>
 
               <button type="default" class="btnC"> 帮TA</button>
@@ -76,6 +65,11 @@
         </div>
       </div>
     </div>
+    <!-- 输入框示例 -->
+    <uni-popup ref="inputDialog" type="dialog">
+      <uni-popup-dialog ref="inputClose" mode="input" title="输入内容" value="!"
+        placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
+    </uni-popup>
     <!-- 使用组件 -->
     <tab-bar :selectNavIndex="0"></tab-bar>
   </div>
@@ -83,7 +77,7 @@
 
 <script>
 import tabBar from "@/components/custom-tab-bar";
-
+import { homePageItem } from "@/apis/detail";
 export default {
   data() {
     return {
@@ -92,6 +86,10 @@ export default {
       autoplay: true,
       interval: 2000,
       duration: 500,
+      value: "",
+      mainContent: [],
+      appletImg: [],
+      subProjects: [],
     };
   },
 
@@ -112,9 +110,37 @@ export default {
     durationChange(e) {
       this.duration = e.target.value;
     },
+    inputDialogToggle() {
+      this.$refs.inputDialog.open();
+    },
+    srcImg(base64) {
+      return `data:image/png;base64,${base64}`;
+    },
+    initD(param) {
+      homePageItem(param)
+        .then((result) => {
+          console.log("result :>> ", result);
+          let { data } = result.data;
+          this.mainContent = data.mainContent;
+          this.subProjects = data.subProjects;
+          this.appletImg = data.appletImgs.filter((cur) => {
+            return cur.imgType == 7;
+          });
+          console.log("appletImg :>> ", this.appletImg);
+          if (Object.keys.length > 0) {
+            this.$refs.inputDialog.close();
+          }
+        })
+        .catch((err) => {});
+    },
+    dialogInputConfirm() {
+      let pa = { fundraisingTitle: this.value };
+      this.initD(pa);
+    },
   },
   created() {
     wx.hideTabBar();
+    this.initD({});
   },
 };
 </script>

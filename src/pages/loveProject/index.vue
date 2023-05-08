@@ -13,19 +13,18 @@
           {{ item.title }}
         </div>
       </div>
-      <div class="project-list-item d-flex" v-for="item in 3" :key="item">
+      <div class="project-list-item d-flex" v-for="item in subProjects" :key="item.id">
         <div class="list-item-left">
           <img class="list-item-img" src="https://img.yzcdn.cn/vant/cat.jpeg" alt="">
         </div>
         <div class="list-item-right">
-          <div class="list-item-title">孤寡老人的医疗救治计划</div>
+          <div class="list-item-title">{{ item.fundraisingTitle }}</div>
           <div class="list-item-desc">
-            为孤寡老人、失能失智老人提供基础医疗服务行动
+            {{ item.story }}
             <div class="mark-content d-flex justify-content-around">
               <div class="mark danger">孤寡老人</div>
               <div class="mark warning">失能失智</div>
               <!--              <div class="mark primary">贫困地区</div>-->
-
               <button class="button" size="small">
                 立即帮助
               </button>
@@ -43,7 +42,7 @@
 // Use Vuex
 import tabBar from "@/components/custom-tab-bar";
 import store from "@/store/index";
-
+import { loveItem } from "@/apis/detail";
 export default {
   data() {
     return {
@@ -77,6 +76,26 @@ export default {
     decrement() {
       store.commit("decrement");
     },
+    initD(param) {
+      loveItem(param)
+        .then((result) => {
+          console.log("result :>> ", result);
+          let { data } = result.data;
+          this.mainContent = data.subProjects;
+          // this.appletImg = data.appletImgs.filter((cur) => {
+          //   return cur.imgType == 7;
+          // });
+          console.log("appletImg :>> ", this.appletImg);
+          if (Object.keys.length > 0) {
+            this.$refs.inputDialog.close();
+          }
+        })
+        .catch((err) => {});
+    },
+  },
+  created() {
+    wx.hideTabBar();
+    this.initD({});
   },
 };
 </script>
